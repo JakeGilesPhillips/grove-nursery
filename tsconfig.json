@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "jsx": "react",
+    "baseUrl": ".",
+    "useDefineForClassFields": true,
+  },
+  "include": [
+    "src/**/*",
+    "types/custom.d.ts"
+  ],
+  "exclude": [
+    "build",
+    "node_modules",
+    "babel.config.js",
+    "webpack.config.js",
+    "eslintrc.json"
+  ]
+}
