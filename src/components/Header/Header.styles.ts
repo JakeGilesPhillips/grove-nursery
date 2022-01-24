@@ -3,9 +3,9 @@ import wave_curve from '../../assets/backgrounds/wave-curve.svg';
 import { GREEN_800, HEADER_HEIGHT, HEADER_HEIGHT_SMALL, SPACE_M, SPACE_XS, SPACE_XXS } from "../../styles/global";
  
 const HeaderWrapper = styled.div<{ small: boolean; shadow?: boolean; }>`
-  position: fixed;
+  position: sticky;
   top: 0px;
-  z-index: 99999;
+  z-index: 999;
 
 	display: flex;
 	justify-content: center;
@@ -13,9 +13,10 @@ const HeaderWrapper = styled.div<{ small: boolean; shadow?: boolean; }>`
   height: ${props => props.small ? HEADER_HEIGHT_SMALL : HEADER_HEIGHT}px;
   transition: .4s;
   background-color: white;
+  overflow: visible;
   ${props => props.shadow && css`
     box-shadow: 0px 10px 10px 4px rgb(0 0 0 / 30%);
-  `}; 
+  `};
 
   ::before {
     content: '';
@@ -28,22 +29,23 @@ const HeaderWrapper = styled.div<{ small: boolean; shadow?: boolean; }>`
     background-image: url("${wave_curve}");
     background-repeat: repeat-x;
     background-position: top;
-    z-index: 999;
   }
 `;
 
 const HeaderInner = styled.div`
+  position: relative;
 	display: flex;
 	justify-content: space-between;
   height: 100%;
   width: 100%;
-  z-index: 999;
-`;
-
-const HeaderLogo = styled.div`
+  `;
+  
+  const HeaderLogo = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
+  max-width: 70%;
 `;
 
 const HeaderLinks = styled.div`

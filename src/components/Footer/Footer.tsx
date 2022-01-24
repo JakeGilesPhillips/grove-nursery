@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { useMemo } from 'react';
-import colorLerp from 'color-lerp';
+import { useMediaQuery } from 'react-responsive';
 
 import { useWindowSize } from '../../utils/hooks';
+import { TabletSize } from '../../models/variables';
 import { CONTACT_EMAIL, GOOGLE_MAPS_URL, PHONE_NUMBER } from '../../models/constants';
 
 import Link from '../Link';
@@ -10,8 +11,8 @@ import Image from '../Image';
 import DynamicWrapper from '../DynamicWrapper';
 
 import OfstedLogo from '../../assets/ofsted/Ofsted_Good_GP_Colour.png';
-import { Column, Row, Caption, Paragraph_2, Title } from '../../styles/shared';
-import { SPACE_S, GREEN_800 } from '../../styles/global';
+import { Column, Caption, Paragraph_2, Title } from '../../styles/shared';
+import { SPACE_S } from '../../styles/global';
 import { FooterSegment, FooterSegmentWrapper, FooterWrapper } from './Footer.styles';
 
 type FooterProps = {
@@ -22,6 +23,8 @@ type FooterProps = {
 const Footer = (props: FooterProps) => {
   const { color, noShadow } = props;
 
+  const IsTabletOrPhone = useMediaQuery({ query: `(max-width: ${TabletSize.max}px)` });
+
   const screenSize = useWindowSize();
   const isShorterThanScreen = useMemo(() => {
     return document.body.clientHeight < screenSize.height;
@@ -31,7 +34,7 @@ const Footer = (props: FooterProps) => {
     <FooterWrapper id='footer' fixed={isShorterThanScreen} noShadow={noShadow} color={color}>
       <DynamicWrapper>
         <Column>
-          <FooterSegmentWrapper padding={{ top: SPACE_S, bottom: SPACE_S }}>
+          <FooterSegmentWrapper padding={{ top: SPACE_S, bottom: SPACE_S }} tabletOrPhone={IsTabletOrPhone}>
             <FooterSegment>
               <Title>Grove Nursery &amp; Preschool</Title>
               <Paragraph_2>Shepperton House</Paragraph_2>
@@ -52,12 +55,12 @@ const Footer = (props: FooterProps) => {
                 <Paragraph_2 underline>{CONTACT_EMAIL}</Paragraph_2>
               </Link>
             </FooterSegment>
-            <FooterSegment alignRight>
+            <FooterSegment alignRight hide={IsTabletOrPhone}>
               <Image src={OfstedLogo} height={125} />
             </FooterSegment>
           </FooterSegmentWrapper>
 
-          <FooterSegmentWrapper padding={{ top: 4, bottom: 4 }}>
+          <FooterSegmentWrapper padding={{ top: 4, bottom: 4 }} hide={IsTabletOrPhone}>
             <Caption weight={700}>&copy; Grove Nursery & Preschool {new Date().getFullYear()}</Caption>
             <Caption weight={700}>
               Website designed by&nbsp;

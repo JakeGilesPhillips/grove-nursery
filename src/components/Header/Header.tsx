@@ -64,7 +64,7 @@ const Header = (props: HeaderProps) => {
       <DynamicWrapper id='header-bar' style={{ background: 'white', zIndex: 9999 }}>
         <HeaderInner id='header-bar-inner'>
           {/* Logo */}
-          <HeaderLogo id='header-bar-logo'>
+          <HeaderLogo id='header-bar-logo' onClick={() => onLinkClicked(MenuOptions[0].link)}>
             <Image src={smallHeader ? LogoText : LogoFull} height={'95%'} />
           </HeaderLogo>
 
@@ -103,11 +103,11 @@ const Header = (props: HeaderProps) => {
       {/* Mobile dropdown */}
       <MediaQuery maxWidth={TabletSize.max}>
         <HeaderMobile id='header-mobile' open={menuOpen}>
-          {MenuOptions.map(({ title, link, bubble }, index) => {
+          {MenuOptions.map(({ title, link }, index) => {
             const color = colorLerp(GREEN_800, GREEN_400, MenuOptions.length)[index];
             return (
               <HeaderMobileBar key={index} index={index} count={MenuOptions.length} open={menuOpen} color={color}>
-                <HeaderNavLink>{title}</HeaderNavLink>
+                <HeaderNavLink onClick={() => onLinkClicked(link)}>{title}</HeaderNavLink>
               </HeaderMobileBar>
             );
           })}

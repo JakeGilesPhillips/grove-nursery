@@ -19,13 +19,14 @@ const Brochure = () => {
     <Wrapper id='wrapper'>
       <Header scrollY={scrollY} />
       <ContentBlock backgroundImage={chestnut_room_004} fixedHeight={300} scroll={{ start: 50, friction: 1 }} waveBottom />
-      <ContentBlock waveBottom>
+      <ContentBlock waveBottom fixedHeight={410}>
         <Column centerH centerV>
           <Link to={url} target='_blank/'>
             <PageTitle>Download Brochure</PageTitle>
           </Link>
         </Column>
       </ContentBlock>
+      <ContentBlock backgroundImage={chestnut_room_004} fixedHeight={300} scroll={{ start: 50, friction: 1 }} waveTop />
       <Footer color={GREEN_200} noShadow></Footer>
     </Wrapper>
   );
