@@ -1,7 +1,7 @@
-import { GREEN_800, GREEN_400, GREEN_200, GREEN_100 } from 'src/styles/global';
-import { BLUE_800, BLUE_700, BLUE_600, BLUE_500, BLUE_400, BLUE_300, BLUE_200, BLUE_100 } from 'src/styles/global';
-import { RED_800, RED_700, RED_600, RED_400, RED_200, RED_100 } from 'src/styles/global';
-import { PLATINUM_800, PLATINUM_700, PLATINUM_600, PLATINUM_500, PLATINUM_400, PLATINUM_300, PLATINUM_200, PLATINUM_100 } from 'src/styles/global';
+import { GREEN_800, GREEN_400, GREEN_200, GREEN_100 } from '../styles/global';
+import { BLUE_800, BLUE_700, BLUE_600, BLUE_500, BLUE_400, BLUE_300, BLUE_200, BLUE_100 } from '../styles/global';
+import { RED_800, RED_700, RED_600, RED_400, RED_200, RED_100 } from '../styles/global';
+import { PLATINUM_800, PLATINUM_700, PLATINUM_600, PLATINUM_500, PLATINUM_400, PLATINUM_300, PLATINUM_200, PLATINUM_100 } from '../styles/global';
 
 export enum Color {
   Green,
@@ -71,5 +71,15 @@ export const ColorMap = new Map<Color, Map<ColorWeight, string>>([
     ]),
   ],
 ]);
+
+export const hexToRgb = (hex: string): string => {
+  const split = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  const { r, g, b } = {
+    r: parseInt(split[1], 16),
+    g: parseInt(split[2], 16),
+    b: parseInt(split[3], 16),
+  };
+  return [r, g, b].join(',');
+};
 
 export const getWeightedColor = (color: Color, weight: ColorWeight) => ColorMap.get(color).get(weight);

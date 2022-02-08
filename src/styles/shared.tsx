@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { PLATINUM_700 } from './global';
+import { PLATINUM_700, SPACE_XS } from './global';
 
 /** FLEX STYLES */
 const Row = styled.div<{ centerH?: boolean; centerV?: boolean; between?: boolean }>`
@@ -25,10 +25,10 @@ const Row = styled.div<{ centerH?: boolean; centerV?: boolean; between?: boolean
       align-items: center;
     `}
 `;
-const Column = styled.div<{ centerH?: boolean; centerV?: boolean; between?: boolean }>`
+const Column = styled.div<{ centerH?: boolean; centerV?: boolean; between?: boolean; columns?: number }>`
   display: flex;
   flex-direction: column;
-  flex: 1;
+  width: ${(props) => 100 / (props.columns ?? 1)}%;
 
   ${(props) =>
     props.between &&
@@ -52,57 +52,51 @@ const Column = styled.div<{ centerH?: boolean; centerV?: boolean; between?: bool
 /** TEXT STYLES */
 const span = styled.span<{ weight?: number; underline?: boolean }>`
   display: inline-flex;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Dongle', sans-serif;
+  line-height: 1;
+  color: ${(props) => props.color ?? PLATINUM_700};
   ${(props) =>
     props.underline &&
     css`
       text-decoration: underline;
-    `}
+    `};
 `;
 
 const PageTitle = styled(span)`
-  color: ${(props) => props.color ?? PLATINUM_700};
-  font-size: 20pt;
-  font-weight: ${(props) => props.weight ?? 900};
-`;
-const Heading = styled(span)`
-  color: ${(props) => props.color ?? PLATINUM_700};
-  font-size: 18pt;
-  font-weight: ${(props) => props.weight ?? 800};
-`;
-const Subheading = styled(span)`
-  color: ${(props) => props.color ?? PLATINUM_700};
-  font-size: 16pt;
+  font-size: 30pt;
   font-weight: ${(props) => props.weight ?? 700};
 `;
+const Heading = styled(span)`
+  font-size: 24pt;
+  font-weight: ${(props) => props.weight ?? 700};
+`;
+const Subheading = styled(span)`
+  font-size: 22pt;
+  font-weight: ${(props) => props.weight ?? 400};
+  margin-bottom: ${SPACE_XS}px;
+`;
 const Title = styled(span)`
-  color: ${(props) => props.color ?? PLATINUM_700};
-  font-size: 14pt;
-  font-weight: ${(props) => props.weight ?? 600};
+  font-size: 20pt;
+  font-weight: ${(props) => props.weight ?? 400};
 `;
 const Subtitle = styled(span)`
-  color: ${(props) => props.color ?? PLATINUM_700};
-  font-size: 12pt;
-  font-weight: ${(props) => props.weight ?? 500};
+  font-size: 18pt;
+  font-weight: ${(props) => props.weight ?? 300};
 `;
 const Paragraph_1 = styled(span)`
-  color: ${(props) => props.color ?? PLATINUM_700};
-  font-size: 12pt;
-  font-weight: ${(props) => props.weight ?? 400};
+  font-size: 16pt;
+  font-weight: ${(props) => props.weight ?? 300};
 `;
 const Paragraph_2 = styled(span)`
-  color: ${(props) => props.color ?? PLATINUM_700};
-  font-size: 10pt;
-  font-weight: ${(props) => props.weight ?? 400};
+  font-size: 12pt;
+  font-weight: ${(props) => props.weight ?? 300};
 `;
 const Caption = styled(span)`
-  color: ${(props) => props.color ?? PLATINUM_700};
-  font-size: 8pt;
+  font-size: 10pt;
   font-weight: ${(props) => props.weight ?? 300};
 `;
 const HeaderNavLink = styled(span)`
-  color: ${(props) => props.color ?? PLATINUM_700};
-  font-size: 10pt;
+  font-size: 14pt;
   font-weight: ${(props) => props.weight ?? 700};
 `;
 

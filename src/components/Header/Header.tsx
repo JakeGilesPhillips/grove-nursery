@@ -11,11 +11,22 @@ import Image from '../Image';
 import DynamicWrapper from '../DynamicWrapper';
 
 import LogoFull from '../../assets/logos/logo-full.png';
-import LogoText from '../../assets/logos/logo-text.png';
+import LogoFullNew from '../../assets/logos/logo-full-new.png';
 
 import { HeaderNavLink, Paragraph_2 } from '../../styles/shared';
-import { GREEN_400, GREEN_800, HEADER_SCROLL_THRESHOLD, SPACE_M, PLATINUM_700 } from '../../styles/global';
-import { HeaderWrapper, HeaderInner, HeaderLink, HeaderLogo, HeaderLinks, HeaderLinksRow, HeaderBurger, HeaderMobile, HeaderMobileBar } from './Header.styles';
+import { GREEN_400, GREEN_800, HEADER_SCROLL_THRESHOLD } from '../../styles/global';
+import {
+  HeaderWrapper,
+  HeaderInner,
+  HeaderLink,
+  HeaderLogo,
+  HeaderTitle,
+  HeaderLinks,
+  HeaderLinksRow,
+  HeaderBurger,
+  HeaderMobile,
+  HeaderMobileBar,
+} from './Header.styles';
 import BurgerMenu from '../BurgerMenu';
 import Link from '../Link';
 
@@ -65,24 +76,24 @@ const Header = (props: HeaderProps) => {
         <HeaderInner id='header-bar-inner'>
           {/* Logo */}
           <HeaderLogo id='header-bar-logo' onClick={() => onLinkClicked(MenuOptions[0].link)}>
-            <Image src={smallHeader ? LogoText : LogoFull} height={'95%'} />
+            {smallHeader ? <HeaderTitle>Grove Nursery</HeaderTitle> : <Image src={LogoFullNew} height={'95%'} />}
           </HeaderLogo>
 
           {/* Hide links when reached tablet */}
           <MediaQuery minWidth={TabletSize?.max}>
             <HeaderLinks id='header-bar-links'>
               <HeaderLinksRow id='header-bar-links-contact' hide={smallHeader}>
-                <Link icon={{ icon: 'phone', size: 12, padding: { top: 2, right: 4 } }} url=''>
+                <Link icon={{ icon: 'phone', size: 12, padding: { bottom: 2, right: 4 } }} url=''>
                   <Paragraph_2 weight={500}>{PHONE_NUMBER}</Paragraph_2>
                 </Link>
-                <Link icon={{ icon: 'mail', size: 12, padding: { top: 2, left: 24, right: 4 } }} url={`mailto:${CONTACT_EMAIL}`}>
+                <Link icon={{ icon: 'mail', size: 12, padding: { bottom: 2, left: 24, right: 4 } }} url={`mailto:${CONTACT_EMAIL}`}>
                   <Paragraph_2 weight={500}>{CONTACT_EMAIL}</Paragraph_2>
                 </Link>
               </HeaderLinksRow>
               <HeaderLinksRow id='header-bar-links-navigation'>
                 {MenuOptions.map(({ title, link, bubble }, index) => {
                   return (
-                    <HeaderLink key={index} selected={pathname === title} onClick={() => onLinkClicked(link)} bubble={bubble}>
+                    <HeaderLink key={index} selected={pathname === link} onClick={() => onLinkClicked(link)} bubble={bubble}>
                       <HeaderNavLink>{title}</HeaderNavLink>
                     </HeaderLink>
                   );

@@ -5,6 +5,7 @@ const DynamicContainer = styled.div<{ minMax: MinMax | undefined, padding: numbe
   position: relative;
   display: inherit;
   flex: 1;
+  height: 100%;
   min-width: ${props => (props.minMax?.min - props.padding * 2) ?? 0}px;
 	max-width: ${props => props.minMax?.max ?? 0}px;
   padding-left: ${props => props.padding}px;

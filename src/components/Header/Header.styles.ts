@@ -1,9 +1,10 @@
 import styled, { css } from "styled-components";
 import wave_curve from '../../assets/backgrounds/wave-curve.svg';
-import { GREEN_800, HEADER_HEIGHT, HEADER_HEIGHT_SMALL, SPACE_M, SPACE_XS, SPACE_XXS } from "../../styles/global";
+import { GREEN_800, GREEN_400, HEADER_HEIGHT, HEADER_HEIGHT_SMALL, SPACE_M, SPACE_S, SPACE_XS, SPACE_XXS } from "../../styles/global";
+import { PageTitle } from "../../styles/shared";
  
 const HeaderWrapper = styled.div<{ small: boolean; shadow?: boolean; }>`
-  position: sticky;
+  position: fixed;
   top: 0px;
   z-index: 999;
 
@@ -13,6 +14,7 @@ const HeaderWrapper = styled.div<{ small: boolean; shadow?: boolean; }>`
   height: ${props => props.small ? HEADER_HEIGHT_SMALL : HEADER_HEIGHT}px;
   transition: .4s;
   background-color: white;
+  padding-bottom: ${SPACE_XS}px;
   overflow: visible;
   ${props => props.shadow && css`
     box-shadow: 0px 10px 10px 4px rgb(0 0 0 / 30%);
@@ -48,6 +50,11 @@ const HeaderInner = styled.div`
   max-width: 70%;
 `;
 
+const HeaderTitle = styled(PageTitle)`
+  color: ${GREEN_800};
+  padding-top: ${SPACE_S}px;
+`;
+
 const HeaderLinks = styled.div`
   display: flex;
   flex-direction: column;
@@ -70,6 +77,7 @@ const HeaderLinksRow = styled.div<{ hide?: boolean }>`
 
 const HeaderLink = styled.div<{ selected?: boolean; bubble?: boolean }>`
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   margin-left: ${SPACE_M}px;
@@ -78,21 +86,38 @@ const HeaderLink = styled.div<{ selected?: boolean; bubble?: boolean }>`
   padding-top: ${SPACE_XXS}px;
   padding-bottom: ${SPACE_XXS}px;
   cursor: pointer;
+  
+  ::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: ${GREEN_400};
+    transition: .4s;
+  }
+
+  :hover::after {
+    width: ${props => !props.bubble && `100%`};
+  }
 
   ${props => props.bubble && {
     backgroundColor: GREEN_800,
     borderRadius: 100,
+    paddingBottom: 0,
+    paddingTop: 1.5,
 
     span: {
       color: "white",
     }
   }}
 
-  ${props => props.selected && {
-    borderBottomWidth: 1,
-    borderBottomStyle: 'solid',
-    borderBottomColor: GREEN_800,
-  }}
+  ${props => props.selected && !props.bubble && css`
+    ::after {
+      width: 100%;
+    }
+  `}
 `;
 
 const HeaderBurger = styled.div`
@@ -137,6 +162,7 @@ export {
   HeaderWrapper, 
   HeaderInner, 
   HeaderLogo,
+  HeaderTitle,
   HeaderLinks,
   HeaderLinksRow, 
   HeaderLink,

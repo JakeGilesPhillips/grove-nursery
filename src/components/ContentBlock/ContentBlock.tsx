@@ -13,7 +13,9 @@ export interface ContentBlockProps {
   repeatPattern?: boolean;
   scroll?: Scrollable;
   fixedHeight?: number;
-  paddingH?: number;
+  minHeight?: number;
+  paddingTop?: number;
+  paddingBot?: number;
   waveTop?: boolean;
   waveBottom?: boolean;
   shadow?: boolean;

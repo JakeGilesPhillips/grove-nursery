@@ -3,12 +3,11 @@ import { GREEN_100 } from "../../styles/global";
 import { ContentBlockProps } from "./ContentBlock";
 
 const Block = styled.div<ContentBlockProps>`
-position: relative;
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding-top: ${props => props.paddingH ?? 0}px;
-  padding-bottom: ${props => props.paddingH ?? 0}px;
+  padding-top: ${props => props.paddingTop ?? 0}px;
+  padding-bottom: ${props => props.paddingBot ?? 0}px;
   background-color: ${GREEN_100};
 
   ${props => props.shadow && {
@@ -22,8 +21,12 @@ position: relative;
   }};
 
   ${props => props.fixedHeight && {
-    height: `${props.fixedHeight}px`,
-    maxHeight: `${props.fixedHeight}px`,
+    height: `${props.fixedHeight - (props.paddingTop ?? 0) + (props.paddingBot ?? 0)}px`,
+    maxHeight: `${props.fixedHeight - (props.paddingTop ?? 0) + (props.paddingBot ?? 0)}px`,
+  }};
+
+  ${props => props.minHeight && {
+    minHeight: `${props.minHeight - (props.paddingTop ?? 0) + (props.paddingBot ?? 0)}px`,
   }};
 
   ${props => props.waveTop && css`
