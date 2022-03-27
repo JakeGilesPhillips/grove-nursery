@@ -39,3 +39,8 @@ export interface Scrollable {
   start?: number;
   friction?: number;
 }
+
+export enum Direction {
+  Column = 'column',
+  Row = 'row',
+}

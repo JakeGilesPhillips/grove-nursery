@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useScrollPosition, useWindowSize } from './utils/hooks';
 
 import Home from './pages/Home';
+import OurNursery from './pages/OurNursery';
 import Contact from './pages/Contact';
 import Brochure from './pages/Brochure';
 import Error from './pages/Error';
@@ -12,6 +12,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/our-nursery' element={<OurNursery />} />
         <Route path='/contact-us' element={<Contact />} />
         <Route path='/request-brochure' element={<Brochure />} />
         <Route path='*' element={<Error />} />

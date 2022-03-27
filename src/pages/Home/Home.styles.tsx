@@ -6,13 +6,9 @@ const Wrapper = styled.div`
   padding-top: 0px;
 `;
 
-const Quote = styled(PageTitle)`
-  color: white;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-`;
-
 const Tagline = styled(Subheading)`
   color: white;
+  text-align: center;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 `;
 
@@ -31,4 +27,4 @@ const ContactButton = styled(Heading)`
   }
 `;
 
-export { Wrapper, Quote, Tagline, ContactButton };
+export { Wrapper, Tagline, ContactButton };

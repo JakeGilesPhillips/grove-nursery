@@ -24,7 +24,7 @@ const Contact = () => {
     <Wrapper id='wrapper'>
       <Header scrollY={scrollY} />
       <ContentBlock repeatPattern backgroundImage={pattern_001} paddingTop={headerOffset} minHeight={screenSize.height}>
-        <Column centerH>
+        <Column centerH centerV>
           <PageTitle>Contact Us</PageTitle>
           <Paragraph_1 style={{ textAlign: 'center' }}>
             Want to find out more information about sending your child here? Or just want to ask us a question or give us some feedback?
@@ -35,6 +35,7 @@ const Contact = () => {
           <ContactForm />
         </Column>
       </ContentBlock>
+      <Footer color={GREEN_200} noShadow></Footer>
     </Wrapper>
   );
 };

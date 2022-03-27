@@ -50,3 +50,5 @@ export const interpolateScroll = (scrollable: Scrollable, scrollY: number): numb
 export const hexToUrl = (hex: string = '#FFFFFF'): string => {
   return hex.replace('#', '%23');
 };
+
+export const getImages = (images: string[]) => images.map((i) => ({ original: i }));

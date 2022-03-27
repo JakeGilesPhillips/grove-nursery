@@ -1,5 +1,11 @@
 import * as React from 'react';
+import ImageGallery from 'react-image-gallery';
+import { useMediaQuery } from 'react-responsive';
+
 import { useScrollPosition } from '../../utils/hooks';
+import { getImages } from '../../utils/helpers';
+import { Direction } from '../../models/models';
+import { TabletSize } from '../../models/variables';
 
 import Header from '../../components/Header';
 import ContentBlock from '../../components/ContentBlock';
@@ -9,13 +15,25 @@ import pattern_001 from '../../assets/backgrounds/pattern_001.png';
 import oak_room_001 from '../../assets/nursery/oak-room-001.jpeg';
 import chestnut_room_004 from '../../assets/nursery/chestnut-room-001.jpeg';
 
+import image_001 from '../../assets/photos/image-001.png';
+import image_002 from '../../assets/photos/image-002.png';
+import image_003 from '../../assets/photos/image-003.png';
+import image_004 from '../../assets/photos/image-004.png';
+
 import { GREEN_200, SPACE_XL, HEADER_HEIGHT } from '../../styles/global';
-import { Row, Column, Paragraph_1, Subheading } from '../../styles/shared';
-import { Wrapper, Quote, ContactButton, Tagline } from './Home.styles';
+import { Row, Column, Quote, Paragraph_1, Subheading } from '../../styles/shared';
+import { Wrapper, ContactButton, Tagline } from './Home.styles';
 
 const Home = () => {
   const scrollY = useScrollPosition();
   const headerOffset = HEADER_HEIGHT + SPACE_XL;
+
+  const IsTablet = useMediaQuery({ query: `(max-width: ${TabletSize.max}px)` });
+
+  const direction = IsTablet ? Direction.Column : Direction.Row;
+  const columns = IsTablet ? 1 : 2.1;
+
+  const images = [image_001, image_002, image_003, image_004];
 
   return (
     <Wrapper id='wrapper'>
@@ -37,8 +55,8 @@ const Home = () => {
         </Column>
       </ContentBlock>
       <ContentBlock paddingTop={SPACE_XL} paddingBot={SPACE_XL}>
-        <Row>
-          <Column columns={2}>
+        <Row between direction={direction}>
+          <Column columns={columns}>
             <Subheading weight={700}>A Beautiful Space</Subheading>
             <Paragraph_1>
               At The Grove we provide children with the opportunities and the help they need to become confident, happy, successful and fulfilled individuals.
@@ -58,6 +76,10 @@ const Home = () => {
               The Grove is a wonderfully spacious nursery; there are five rooms specifically equipped for the children who are grouped according to age so that
               babies, toddlers, and pre school children all have their own areas.{' '}
             </Paragraph_1>
+          </Column>
+          <br />
+          <Column columns={columns}>
+            <ImageGallery items={getImages(images)} showPlayButton={false} showNav={false} autoPlay slideInterval={3000} />
           </Column>
         </Row>
       </ContentBlock>

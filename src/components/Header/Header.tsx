@@ -43,7 +43,10 @@ interface MenuOption {
 
 const MenuOptions: MenuOption[] = [
   { title: 'HOME', link: '/' },
-  { title: 'OFSTED REPORT', link: '/ofsted-report' },
+  { title: 'OUR NURSERY', link: '/our-nursery' },
+  { title: 'OUR CLASSES', link: '/our-classes' },
+  { title: 'OUR FEES', link: '/our-fees' },
+  { title: 'GREENER GROVE', link: '/greener-grove' },
   { title: 'REQUEST BROCHURE', link: '/request-brochure' },
   { title: 'CONTACT US', link: '/contact-us', bubble: true },
 ];
