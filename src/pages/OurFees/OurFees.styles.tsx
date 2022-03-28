@@ -7,7 +7,7 @@ const Wrapper = styled.div`
 `;
 
 const ScrollWrapper = styled.div`
-  overflow: scroll;
+  overflow-x: scroll;
   flex: 1;
 `;
 

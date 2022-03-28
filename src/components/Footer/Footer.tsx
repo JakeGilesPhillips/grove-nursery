@@ -65,7 +65,7 @@ const Footer = (props: FooterProps) => {
             <Caption weight={700}>&copy; Grove Nursery & Preschool {new Date().getFullYear()}</Caption>
             <Caption weight={700}>
               Website designed by&nbsp;
-              <Link url='www.newblankpage.co.uk'>
+              <Link url='https://www.newblankpage.co.uk'>
                 <Caption underline weight={800}>
                   NewBlankPage
                 </Caption>

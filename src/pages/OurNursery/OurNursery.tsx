@@ -12,7 +12,7 @@ import ContentBlock from '../../components/ContentBlock';
 import Footer from '../../components/Footer';
 
 import pattern_001 from '../../assets/backgrounds/pattern_001.png';
-import welcome_area from '../../assets/nursery/welcome-area-001.jpeg';
+import street_view from '../../assets/nursery/street-view-001.jpeg';
 import willow_room_001 from '../../assets/nursery/willow-room-001.jpeg';
 import willow_room_002 from '../../assets/nursery/willow-room-002.jpeg';
 import willow_room_003 from '../../assets/nursery/willow-room-003.jpeg';
@@ -61,8 +61,8 @@ const OurNursery = () => {
     <Wrapper id='wrapper'>
       <Header scrollY={scrollY} />
       <ContentBlock
-        backgroundImage={welcome_area}
-        scroll={{ start: 60, friction: 0.6 }}
+        backgroundImage={street_view}
+        scroll={{ start: 35, friction: 0.6 }}
         paddingTop={headerOffset}
         paddingBot={SPACE_XL}
         shadow

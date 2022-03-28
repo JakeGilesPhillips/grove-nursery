@@ -1,6 +1,9 @@
 import * as React from 'react';
+import MediaQuery from 'react-responsive';
 
 import { useScrollPosition } from '../../utils/hooks';
+import { CONTACT_EMAIL } from '../../models/constants';
+import { PhoneSize } from '../../models/variables';
 
 import Header from '../../components/Header';
 import ContentBlock from '../../components/ContentBlock';
@@ -242,6 +245,28 @@ const OurFees = () => {
               </Column>
             </ScrollWrapperInner>
           </ScrollWrapper>
+
+          <br />
+          <Row centerH noFlex>
+            <MediaQuery maxWidth={PhoneSize.max}>
+              <Column centerH>
+                <Paragraph_1 weight={400}>If you would like to talk to us about enrollment</Paragraph_1>
+                <Paragraph_1 weight={400}>
+                  you can&nbsp;<a href={'/contact-us'}>contact us</a>
+                </Paragraph_1>
+                <Paragraph_1 weight={400}>
+                  or send an email to&nbsp;<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+                </Paragraph_1>
+              </Column>
+            </MediaQuery>
+
+            <MediaQuery minWidth={PhoneSize.max}>
+              <Paragraph_1 weight={400}>
+                If you would like to talk to us about enrollment you can&nbsp;<a href={'/contact-us'}>contact us</a>&nbsp;or send an email to&nbsp;
+                <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+              </Paragraph_1>
+            </MediaQuery>
+          </Row>
         </Column>
       </ContentBlock>
 

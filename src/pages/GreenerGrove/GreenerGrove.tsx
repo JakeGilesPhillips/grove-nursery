@@ -1,6 +1,9 @@
 import * as React from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import { useScrollPosition } from '../../utils/hooks';
+import { Direction } from '../../models/models';
+import { PhoneSize } from '../../models/variables';
 
 import Header from '../../components/Header';
 import ContentBlock from '../../components/ContentBlock';
@@ -17,7 +20,9 @@ import { Wrapper } from './GreenerGrove.styles';
 
 const GreenerGrove = () => {
   const scrollY = useScrollPosition();
+  const IsPhone = useMediaQuery({ query: `(max-width: ${PhoneSize.max}px)` });
 
+  const direction = IsPhone ? Direction.Column : Direction.Row;
   const headerOffset = HEADER_HEIGHT * 2;
 
   return (
@@ -100,12 +105,13 @@ const GreenerGrove = () => {
           <br />
           <br />
           <br />
-          <Row between>
-            <img src={terracycle} height={100} />
-            <img src={surferssewage} height={100} />
-            <img src={nationalforest} height={100} />
-            <img src={ecoschools} height={100} />
+          <Row between direction={direction}>
+            <img src={terracycle} height={100} style={{ objectFit: 'scale-down' }} />
+            <img src={surferssewage} height={100} style={{ objectFit: 'scale-down' }} />
+            <img src={nationalforest} height={100} style={{ objectFit: 'scale-down' }} />
+            <img src={ecoschools} height={100} style={{ objectFit: 'scale-down' }} />
           </Row>
+          <br />
         </Column>
       </ContentBlock>
       <Footer color={GREEN_200} noShadow></Footer>
