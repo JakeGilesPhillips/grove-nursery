@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useMemo } from 'react';
+import { useMemo, useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import { useWindowSize } from '../../utils/hooks';
@@ -23,12 +23,13 @@ type FooterProps = {
 const Footer = (props: FooterProps) => {
   const { color, noShadow } = props;
 
-  const IsTabletOrPhone = useMediaQuery({ query: `(max-width: ${TabletSize.max}px)` });
-
   const screenSize = useWindowSize();
-  const isShorterThanScreen = useMemo(() => {
-    return document.body.clientHeight < screenSize.height;
-  }, [screenSize, document.body.clientHeight]);
+  const IsTabletOrPhone = useMediaQuery({ query: `(max-width: ${TabletSize.max}px)` });
+  const [isShorterThanScreen, setIsShorterThanScreen] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsShorterThanScreen(document.body.clientHeight < screenSize.height);
+  }, [document.body.clientHeight, screenSize]);
 
   return (
     <FooterWrapper id='footer' fixed={isShorterThanScreen} noShadow={noShadow} color={color}>

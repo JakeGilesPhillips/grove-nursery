@@ -3,10 +3,10 @@ import { PLATINUM_700, SPACE_XS } from './global';
 import { Direction } from '../models/models';
 
 /** FLEX STYLES */
-const Row = styled.div<{ centerH?: boolean; centerV?: boolean; between?: boolean; direction?: Direction }>`
+const Row = styled.div<{ noFlex?: boolean; centerH?: boolean; centerV?: boolean; between?: boolean; direction?: Direction }>`
   display: flex;
   flex-direction: ${(props) => (props.direction ? props.direction : Direction.Row)};
-  flex: 1;
+  flex: ${(props) => (props.noFlex ? 0 : 1)};
 
   ${(props) =>
     props.between &&

@@ -32,6 +32,10 @@ import oak_room_002 from '../../assets/nursery/oak-room-002.jpeg';
 import oak_room_003 from '../../assets/nursery/oak-room-003.jpeg';
 import oak_room_004 from '../../assets/nursery/oak-room-004.jpeg';
 import oak_room_005 from '../../assets/nursery/oak-room-005.jpeg';
+import explore_room_001 from '../../assets/nursery/explore-room-001.jpeg';
+import explore_room_002 from '../../assets/nursery/explore-room-002.jpeg';
+import explore_room_003 from '../../assets/nursery/explore-room-003.jpeg';
+import teaching_room_001 from '../../assets/nursery/teaching-room-001.jpeg';
 
 import { GREEN_200, SPACE_XL, HEADER_HEIGHT } from '../../styles/global';
 import { Column, Row, Heading, Subheading, Paragraph_1, Quote } from '../../styles/shared';
@@ -44,13 +48,14 @@ const OurNursery = () => {
 
   const titleHeight = IsTablet ? 200 : 400;
   const direction = IsTablet ? Direction.Column : Direction.Row;
-  const columns = IsTablet ? 1 : 2.1;
 
   const willow = [willow_room_001, willow_room_002, willow_room_003];
   const maple = [maple_room_001, maple_room_002, maple_room_003];
   const chestnut = [chestnut_room_001, chestnut_room_002, chestnut_room_003, chestnut_room_004];
   const elm = [elm_room_001, elm_room_002, elm_room_003, elm_room_004];
   const oak = [oak_room_001, oak_room_002, oak_room_003, oak_room_004, oak_room_005];
+  const explore = [explore_room_001, explore_room_002, explore_room_003];
+  const teaching = [teaching_room_001];
 
   return (
     <Wrapper id='wrapper'>
@@ -77,7 +82,7 @@ const OurNursery = () => {
             </Column>
           </Row>
           <Row between direction={direction}>
-            <Column columns={columns}>
+            <Column columns={IsTablet ? 1 : 2}>
               <Paragraph_1>
                 This quiet and airy room provides a warm and comforting environment for our youngest children. There are soft mats to lie or crawl on, mirrored
                 walls for sensory stimulation and equipment to aid physical development. There is a play area for crawling and hiding in. A cushioned book
@@ -105,8 +110,8 @@ const OurNursery = () => {
               </Paragraph_1>
             </Column>
             <br />
-            <Column columns={columns}>
-              <ImageGallery items={getImages(willow)} showPlayButton={false} showNav={false} slideInterval={3000} autoPlay lazyLoad showBullets />
+            <Column columns={IsTablet ? 1 : 2.8}>
+              <ImageGallery items={getImages(willow)} showPlayButton={false} slideInterval={3000} autoPlay lazyLoad showBullets />
             </Column>
           </Row>
         </Column>
@@ -121,7 +126,7 @@ const OurNursery = () => {
             </Column>
           </Row>
           <Row between direction={direction}>
-            <Column columns={columns}>
+            <Column columns={IsTablet ? 1 : 2}>
               <Paragraph_1>This large open space is ideal for energetic toddlers.</Paragraph_1>
               <br />
               <Paragraph_1>
@@ -143,8 +148,9 @@ const OurNursery = () => {
                 area..
               </Paragraph_1>
             </Column>
-            <Column columns={columns}>
-              <ImageGallery items={getImages(maple)} showPlayButton={false} showNav={false} slideInterval={3100} autoPlay lazyLoad showBullets />
+            <br />
+            <Column columns={IsTablet ? 1 : 2.8}>
+              <ImageGallery items={getImages(maple)} showPlayButton={false} slideInterval={3100} autoPlay lazyLoad showBullets />
             </Column>
           </Row>
         </Column>
@@ -159,7 +165,7 @@ const OurNursery = () => {
             </Column>
           </Row>
           <Row between direction={direction}>
-            <Column columns={columns}>
+            <Column columns={IsTablet ? 1 : 2}>
               <Paragraph_1>
                 This light and spacious area has been decorated as a woodland scene with murals and collage that the children are encouraged to explore. It
                 contains equipment and resources specific to the physical, intellectual and emotional needs of the two year old child. There is a home corner
@@ -173,8 +179,9 @@ const OurNursery = () => {
                 with toilet training.
               </Paragraph_1>
             </Column>
-            <Column columns={columns}>
-              <ImageGallery items={getImages(chestnut)} showPlayButton={false} showNav={false} slideInterval={3000} autoPlay lazyLoad showBullets />
+            <br />
+            <Column columns={IsTablet ? 1 : 2.8}>
+              <ImageGallery items={getImages(chestnut)} showPlayButton={false} slideInterval={3000} autoPlay lazyLoad showBullets />
             </Column>
           </Row>
         </Column>
@@ -189,7 +196,7 @@ const OurNursery = () => {
             </Column>
           </Row>
           <Row between direction={direction}>
-            <Column columns={columns}>
+            <Column columns={IsTablet ? 1 : 2}>
               <Paragraph_1>
                 This area has been specially created for our preschool children. It is a beautifully light and calm space with a wild flower and butterfly
                 theme. The pre school children are introduced to the Foundation stage of the National Curriculum through a range of daily planned activities
@@ -223,8 +230,9 @@ const OurNursery = () => {
                 teachers.
               </Paragraph_1>
             </Column>
-            <Column columns={columns}>
-              <ImageGallery items={getImages(elm)} showPlayButton={false} showNav={false} slideInterval={3100} autoPlay lazyLoad showBullets />
+            <br />
+            <Column columns={IsTablet ? 1 : 2.8}>
+              <ImageGallery items={getImages(elm)} showPlayButton={false} slideInterval={3100} autoPlay lazyLoad showBullets />
             </Column>
           </Row>
         </Column>
@@ -239,7 +247,7 @@ const OurNursery = () => {
             </Column>
           </Row>
           <Row between direction={direction}>
-            <Column columns={columns}>
+            <Column columns={IsTablet ? 1 : 2}>
               <Paragraph_1>This beautiful light, spacious room is for our oldest children.</Paragraph_1>
               <br />
               <Paragraph_1>
@@ -257,27 +265,52 @@ const OurNursery = () => {
                 children free access to the low level lavatories and hand basins, and so encouraging independence.
               </Paragraph_1>
             </Column>
-            <Column columns={columns}>
-              <ImageGallery items={getImages(oak)} showPlayButton={false} showNav={false} slideInterval={3000} autoPlay lazyLoad showBullets />
+            <br />
+            <Column columns={IsTablet ? 1 : 2.8}>
+              <ImageGallery items={getImages(oak)} showPlayButton={false} slideInterval={3000} autoPlay lazyLoad showBullets />
             </Column>
           </Row>
         </Column>
       </ContentBlock>
 
       <ContentBlock backgroundImage={pattern_001} repeatPattern shadow paddingTop={SPACE_XL} paddingBot={SPACE_XL} waveTop waveBottom>
-        <Row>
-          <Column columns={2}>
-            <Heading>Explore Room</Heading>
-          </Column>
-        </Row>
+        <Column>
+          <Row>
+            <Column>
+              <Heading>Explore Room</Heading>
+            </Column>
+          </Row>
+          <Row between direction={direction}>
+            <Column columns={IsTablet ? 1 : 2}>
+              <Paragraph_1>This beautiful light, spacious room is for our oldest children.</Paragraph_1>
+              <br />
+            </Column>
+            <br />
+            <Column columns={IsTablet ? 1 : 2.8}>
+              <ImageGallery items={getImages(explore)} showPlayButton={false} slideInterval={3000} autoPlay lazyLoad showBullets />
+            </Column>
+          </Row>
+        </Column>
       </ContentBlock>
 
       <ContentBlock paddingTop={SPACE_XL} paddingBot={SPACE_XL}>
-        <Row>
-          <Column columns={2}>
-            <Heading>Teaching Room</Heading>
-          </Column>
-        </Row>
+        <Column>
+          <Row>
+            <Column>
+              <Heading>Teaching Room</Heading>
+            </Column>
+          </Row>
+          <Row between direction={direction}>
+            <Column columns={IsTablet ? 1 : 2}>
+              <Paragraph_1>This beautiful light, spacious room is for our oldest children.</Paragraph_1>
+              <br />
+            </Column>
+            <br />
+            <Column columns={IsTablet ? 1 : 2.8}>
+              <ImageGallery items={getImages(teaching)} showPlayButton={false} slideInterval={3000} autoPlay lazyLoad showBullets />
+            </Column>
+          </Row>
+        </Column>
       </ContentBlock>
       <Footer color={GREEN_200} noShadow></Footer>
     </Wrapper>
