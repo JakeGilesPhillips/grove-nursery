@@ -36,6 +36,7 @@
     "html-webpack-plugin": "^5.5.0",
     "img-optimize-loader": "^1.0.7",
     "path": "^0.12.7",
+    "react-error-overlay": "^6.0.9",
     "style-loader": "^3.3.1",
     "svg-transform-loader": "^2.0.13",
     "svg-url-loader": "^7.1.1",

@@ -2,15 +2,17 @@ import * as React from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import { useScrollPosition } from '../../utils/hooks';
-import { Direction } from '../../models/models';
 import { TabletSize } from '../../models/variables';
 
 import pattern_001 from '../../assets/backgrounds/pattern_001.png';
+import pattern_002 from '../../assets/backgrounds/pattern_002.png';
 import welcome_area from '../../assets/nursery/welcome-area-001.jpeg';
+import foodlogo from '../../assets/icons/foodhygiene.png';
 
 import Header from '../../components/Header';
 import ContentBlock from '../../components/ContentBlock';
 import Footer from '../../components/Footer';
+import Image from '../../components/Image';
 
 import { GREEN_200, SPACE_XL, HEADER_HEIGHT } from '../../styles/global';
 import { Column, Row, Heading, Subheading, Paragraph_1, Quote } from '../../styles/shared';
@@ -184,7 +186,7 @@ const OurNursery = () => {
       </ContentBlock>
 
       {/* Dance */}
-      <ContentBlock backgroundImage={pattern_001} repeatPattern shadow paddingTop={SPACE_XL} paddingBot={SPACE_XL} waveTop waveBottom>
+      <ContentBlock backgroundImage={pattern_002} repeatPattern shadow paddingTop={SPACE_XL} paddingBot={SPACE_XL} waveTop waveBottom>
         <Column>
           <Row>
             <Column>
@@ -354,7 +356,7 @@ const OurNursery = () => {
           </Row>
           <br />
           <Row>
-            <Column columns={1}>
+            <Column>
               <Paragraph_1>
                 <b>Breakfast</b>&nbsp;– Toast, cereal and fruit served with warm milk
               </Paragraph_1>
@@ -373,6 +375,11 @@ const OurNursery = () => {
               <Paragraph_1>
                 <b>Afternoon Tea</b>&nbsp;– Creamy butternut squash soup served with warm baguettes
               </Paragraph_1>
+              <br />
+              <br />
+              <Row centerV centerH>
+                <Image src={foodlogo} height={80} />
+              </Row>
             </Column>
           </Row>
         </Column>

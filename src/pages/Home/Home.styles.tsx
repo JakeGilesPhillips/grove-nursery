@@ -6,13 +6,18 @@ const Wrapper = styled.div`
   padding-top: 0px;
 `;
 
+const GalleryWrapper = styled.div`
+  overflow: hidden;
+  border-radius: 30px;
+`;
+
 const Tagline = styled(Subheading)`
   color: white;
   text-align: center;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 `;
 
-const ContactButton = styled(Heading)`
+const HoverButton = styled(Heading)`
   background: ${GREEN_800};
   padding-top: ${SPACE_XXS}px;
   padding-left: ${SPACE_M}px;
@@ -27,4 +32,4 @@ const ContactButton = styled(Heading)`
   }
 `;
 
-export { Wrapper, Tagline, ContactButton };
+export { Wrapper, GalleryWrapper, Tagline, HoverButton };

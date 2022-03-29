@@ -11,7 +11,8 @@ import Image from '../Image';
 import DynamicWrapper from '../DynamicWrapper';
 
 import OfstedLogo from '../../assets/ofsted/Ofsted_Good_GP_Colour.png';
-import { Column, Caption, Paragraph_2, Title } from '../../styles/shared';
+
+import { Column, Caption, Paragraph_2, Title, Row } from '../../styles/shared';
 import { SPACE_S } from '../../styles/global';
 import { FooterSegment, FooterSegmentWrapper, FooterWrapper } from './Footer.styles';
 

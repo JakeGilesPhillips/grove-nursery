@@ -1,4 +1,4 @@
-import { SPACE_XS, SPACE_S, SPACE_XXS, GREEN_400 } from "../../styles/global";
+import { SPACE_XS, SPACE_S, SPACE_XXS, GREEN_400, PLATINUM_800 } from "../../styles/global";
 import { Paragraph_1 } from "../../styles/shared";
 import styled, { css } from "styled-components";
 
@@ -11,7 +11,7 @@ const Form = styled.form`
 const Label = styled(Paragraph_1)<{ padL?: boolean }>`
   position: relative;
   margin-bottom: ${SPACE_XXS}px;
-  color: white;
+  color: ${PLATINUM_800};
   ${props => props.padL && css`
     margin-left: ${SPACE_XS}px;
   `}
