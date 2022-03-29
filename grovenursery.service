@@ -1,8 +1,8 @@
 [Unit]
-Description=Grove Nursery React Server
+Description=Grove Nurser Server
 
 [Service]
-ExecStart=/usr/bin/node /var/www/grovenursery/start-website.sh
+ExecStart=/usr/bin/node /var/www/grovenursery/server.js
 Restart=always
 User=newblank
 Group=newblank
