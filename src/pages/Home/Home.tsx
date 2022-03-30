@@ -1,5 +1,6 @@
 import * as React from 'react';
 import ImageGallery from 'react-image-gallery';
+import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 import { useScrollPosition } from '../../utils/hooks';
@@ -28,6 +29,7 @@ import { Row, Column, Quote, Paragraph_1, Subheading } from '../../styles/shared
 import { Wrapper, HoverButton, Tagline, GalleryWrapper } from './Home.styles';
 
 const Home = () => {
+  const navigate = useNavigate();
   const scrollY = useScrollPosition();
   const headerOffset = HEADER_HEIGHT + SPACE_XL;
 
@@ -54,7 +56,7 @@ const Home = () => {
           <Quote>Space to Explore and Grow</Quote>
           <Tagline color='white'>specialist providers of education &amp; childcare for 0-5 year olds</Tagline>
           <br />
-          <HoverButton onClick={() => openLink('/contact-us')}>Contact Us</HoverButton>
+          <HoverButton onClick={() => navigate('/contact-us')}>Contact Us</HoverButton>
         </Column>
       </ContentBlock>
       <ContentBlock paddingTop={SPACE_XL} paddingBot={SPACE_XL}>
@@ -104,7 +106,7 @@ const Home = () => {
             <br />
             <br />
           </Tagline>
-          <HoverButton onClick={() => openLink('/our-nursery')}>Our Nursery</HoverButton>
+          <HoverButton onClick={() => navigate('/our-nursery')}>Our Nursery</HoverButton>
         </Column>
       </ContentBlock>
       <ContentBlock paddingTop={SPACE_XL} paddingBot={SPACE_XL}>
@@ -154,7 +156,7 @@ const Home = () => {
             <br />
             <br />
           </Tagline>
-          <HoverButton onClick={() => openLink('/forest-school')}>Forest School</HoverButton>
+          <HoverButton onClick={() => navigate('/forest-school')}>Forest School</HoverButton>
         </Column>
       </ContentBlock>
       <ContentBlock paddingTop={SPACE_XL} paddingBot={SPACE_XL}>
@@ -184,7 +186,7 @@ const Home = () => {
             </Paragraph_1>
             <br />
             <Row centerH centerV>
-              <HoverButton onClick={() => openLink('/our-classes')}>Our Classes</HoverButton>
+              <HoverButton onClick={() => navigate('/our-classes')}>Our Classes</HoverButton>
             </Row>
           </Column>
           <br />
