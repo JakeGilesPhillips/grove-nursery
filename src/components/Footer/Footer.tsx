@@ -12,7 +12,7 @@ import DynamicWrapper from '../DynamicWrapper';
 
 import OfstedLogo from '../../assets/ofsted/Ofsted_Good_GP_Colour.png';
 
-import { Column, Caption, Paragraph_2, Title, Row } from '../../styles/shared';
+import { Column, Caption, Paragraph_1, Title, Row } from '../../styles/shared';
 import { SPACE_S } from '../../styles/global';
 import { FooterSegment, FooterSegmentWrapper, FooterWrapper } from './Footer.styles';
 
@@ -39,22 +39,22 @@ const Footer = (props: FooterProps) => {
           <FooterSegmentWrapper padding={{ top: SPACE_S, bottom: SPACE_S }} tabletOrPhone={IsTabletOrPhone}>
             <FooterSegment>
               <Title>Grove Nursery &amp; Preschool</Title>
-              <Paragraph_2>Shepperton House</Paragraph_2>
-              <Paragraph_2>83-93 Shepperton Road</Paragraph_2>
-              <Paragraph_2>Islington</Paragraph_2>
-              <Paragraph_2>N1 3DF</Paragraph_2>
+              <Paragraph_1>Shepperton House</Paragraph_1>
+              <Paragraph_1>83-93 Shepperton Road</Paragraph_1>
+              <Paragraph_1>Islington</Paragraph_1>
+              <Paragraph_1>N1 3DF</Paragraph_1>
               <br />
               <Link icon={{ icon: 'room', size: 12, padding: { right: 4 } }} url={GOOGLE_MAPS_URL}>
-                <Paragraph_2 underline>Show on map</Paragraph_2>
+                <Paragraph_1 underline>Show on map</Paragraph_1>
               </Link>
             </FooterSegment>
             <FooterSegment>
               <Title>Contact Us</Title>
               <Link icon={{ icon: 'phone', size: 12, padding: { right: 4 } }} url={`tel:${PHONE_NUMBER}`}>
-                <Paragraph_2 underline>{PHONE_NUMBER}</Paragraph_2>
+                <Paragraph_1 underline>{PHONE_NUMBER}</Paragraph_1>
               </Link>
               <Link icon={{ icon: 'mail', size: 12, padding: { right: 4 } }} url={`mailto:${CONTACT_EMAIL}`}>
-                <Paragraph_2 underline>{CONTACT_EMAIL}</Paragraph_2>
+                <Paragraph_1 underline>{CONTACT_EMAIL}</Paragraph_1>
               </Link>
             </FooterSegment>
             <FooterSegment alignRight hide={IsTabletOrPhone}>

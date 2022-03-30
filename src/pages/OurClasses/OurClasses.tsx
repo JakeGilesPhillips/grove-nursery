@@ -17,6 +17,7 @@ import Image from '../../components/Image';
 import { GREEN_200, SPACE_XL, HEADER_HEIGHT } from '../../styles/global';
 import { Column, Row, Heading, Subheading, Paragraph_1, Quote } from '../../styles/shared';
 import { Wrapper } from './OurClasses.styles';
+import { Tagline } from '../Home/Home.styles';
 
 const OurNursery = () => {
   const scrollY = useScrollPosition();
@@ -38,7 +39,10 @@ const OurNursery = () => {
         waveBottom
       >
         <Column centerH centerV>
-          <Quote fontSize={42}>Our Classes</Quote>
+          <Quote fontSize={42}>Our Extra Classes</Quote>
+          <Tagline>
+            The Grove offers extra lessons taught by specialised teachers in French, Spanish, music, dance, baby and toddler yoga, and Sports school sessions.
+          </Tagline>
         </Column>
       </ContentBlock>
 

@@ -48,6 +48,7 @@ const HeaderInner = styled.div`
   align-items: center;
 	justify-content: flex-start;
   max-width: 70%;
+  cursor: pointer;
 `;
 
 const HeaderTitle = styled(PageTitle)`

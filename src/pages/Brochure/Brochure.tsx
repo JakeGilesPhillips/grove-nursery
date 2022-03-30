@@ -19,6 +19,7 @@ const Brochure = () => {
 
   const brochure = __dirname + 'documents/The%20Grove%20Nursery%20%26%20Preschool%20Brochure.pdf';
   const feestructure = __dirname + 'documents/The%20Grove%20Fee%20Structure%202022.pdf';
+  const parentcontract = __dirname + 'documents/Parent%20and%20The%20Grove%20Contract.docx';
 
   return (
     <Wrapper id='wrapper'>
@@ -39,7 +40,6 @@ const Brochure = () => {
               </BrochureWrapper>
             </Column>
           </Row>
-
           <br />
           <br />
           <Row>
@@ -53,6 +53,9 @@ const Brochure = () => {
               <br />
               <Link url={feestructure}>
                 <Paragraph_1 color={BLUE_400}>Fee Structure 2022</Paragraph_1>
+              </Link>
+              <Link url={parentcontract}>
+                <Paragraph_1 color={BLUE_400}>Parent and The Grove Contract 2022</Paragraph_1>
               </Link>
             </Column>
           </Row>
