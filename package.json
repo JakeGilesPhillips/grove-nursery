@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "dev": "webpack --mode development && node server.js",
-    "build": "webpack --mode production"
+    "dev": "webpack serve",
+    "build:dev": "./scripts/reset.sh; webpack --mode development && node server.js",
+    "build:prod": "./scripts/reset.sh; webpack --mode production"
   },
   "dependencies": {
     "color-lerp": "^1.0.5",

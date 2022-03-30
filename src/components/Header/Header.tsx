@@ -10,10 +10,9 @@ import { CONTACT_EMAIL, PHONE_NUMBER } from '../../models/constants';
 import Image from '../Image';
 import DynamicWrapper from '../DynamicWrapper';
 
-import LogoFull from '../../assets/logos/logo-full.png';
 import LogoFullNew from '../../assets/logos/logo-full-new.png';
 
-import { HeaderNavLink, Paragraph_2 } from '../../styles/shared';
+import { HeaderNavLink, Paragraph_1, Paragraph_2 } from '../../styles/shared';
 import { GREEN_400, GREEN_800, HEADER_SCROLL_THRESHOLD } from '../../styles/global';
 import {
   HeaderWrapper,
@@ -70,6 +69,7 @@ const Header = (props: HeaderProps) => {
 
   // Handle link clicked
   const onLinkClicked = (path: string) => {
+    console.log('fuck');
     navigate(path);
   };
 
@@ -87,10 +87,10 @@ const Header = (props: HeaderProps) => {
             <HeaderLinks id='header-bar-links'>
               <HeaderLinksRow id='header-bar-links-contact' hide={smallHeader}>
                 <Link icon={{ icon: 'phone', size: 12, padding: { bottom: 2, right: 4 } }} url=''>
-                  <Paragraph_2 weight={500}>{PHONE_NUMBER}</Paragraph_2>
+                  <Paragraph_1 weight={500}>{PHONE_NUMBER}</Paragraph_1>
                 </Link>
                 <Link icon={{ icon: 'mail', size: 12, padding: { bottom: 2, left: 24, right: 4 } }} url={`mailto:${CONTACT_EMAIL}`}>
-                  <Paragraph_2 weight={500}>{CONTACT_EMAIL}</Paragraph_2>
+                  <Paragraph_1 weight={500}>{CONTACT_EMAIL}</Paragraph_1>
                 </Link>
               </HeaderLinksRow>
               <HeaderLinksRow id='header-bar-links-navigation'>

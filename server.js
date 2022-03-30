@@ -6,11 +6,6 @@ const port = process.env.PORT || 7710;
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
-app.get('*', (req, res) => {
-  console.log('Getting react page');
-  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
-});
+app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'public', 'index.html')));
 
-app.listen(port, function () {
- console.log('App listening on port: ' + port);
-});
+app.listen(port, () => console.log('App listening on port: ' + port));
