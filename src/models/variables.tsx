@@ -23,7 +23,7 @@ export const ContentSizeMap = new Map<DeviceSize, MinMax>([
 export const ContentPaddingMap = new Map<DeviceSize, number>([
   [DeviceSize.Desktop, SPACE_M],
   [DeviceSize.Laptop, SPACE_M],
-  [DeviceSize.Tablet, SPACE_XS],
+  [DeviceSize.Tablet, SPACE_S],
   [DeviceSize.Phone, SPACE_S],
   [DeviceSize.Unknown, 0],
 ]);

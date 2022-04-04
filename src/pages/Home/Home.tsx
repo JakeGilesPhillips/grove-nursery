@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 import { useScrollPosition } from '../../utils/hooks';
-import { getImages, openLink } from '../../utils/helpers';
+import { getImages } from '../../utils/helpers';
 import { Direction } from '../../models/models';
 import { TabletSize } from '../../models/variables';
 
@@ -24,8 +24,8 @@ import image_004 from '../../assets/photos/image-004.png';
 import image_006 from '../../assets/photos/image-006.png';
 import image_009 from '../../assets/photos/image-009.png';
 
-import { GREEN_200, SPACE_XL, HEADER_HEIGHT, PLATINUM_800 } from '../../styles/global';
-import { Row, Column, Quote, Paragraph_1, Subheading } from '../../styles/shared';
+import { GREEN_200, SPACE_XL, HEADER_HEIGHT } from '../../styles/global';
+import { Row, Column, Quote, Paragraph_1, Subheading, Subtitle } from '../../styles/shared';
 import { Wrapper, HoverButton, Tagline, GalleryWrapper } from './Home.styles';
 
 const Home = () => {
@@ -197,15 +197,43 @@ const Home = () => {
           </Column>
         </Row>
       </ContentBlock>
-      <ContentBlock
-        backgroundImage={chestnut_room_004}
-        scroll={{ start: 0, friction: 0.8 }}
-        fixedHeight={300}
-        paddingTop={SPACE_XL}
-        paddingBot={SPACE_XL}
-        shadow
-        waveTop
-      />
+      <ContentBlock backgroundImage={pattern_001} repeatPattern shadow paddingTop={100} paddingBot={100} waveTop>
+        <Column centerH centerV>
+          <Row centerV>
+            <Tagline color='white'>What Parents Say About The Grove</Tagline>
+          </Row>
+          <br />
+          <Row between direction={direction}>
+            <Column columns={columns}>
+              <Subtitle>
+                “Our daughter has been extremely happy in your care and the contribution you have made to her continuing development has been beyond my
+                expectations.”
+              </Subtitle>
+              <br />
+              <br />
+              <Subtitle>
+                “Thank you, thank you, thank you! You have such a lovely nursery and we will continue to recommend it. We hope all continues to flourish and The
+                Grove family continues to grow and blossom.”
+              </Subtitle>
+            </Column>
+            <br />
+            <br />
+            <Column columns={columns}>
+              <Subtitle>
+                “I would like to thank everybody in the nursery for the love and support you have given my son and for all the skills he has learned in The
+                Grove. I am sure you realise that we cannot express in words how grateful we are for the great time that he has spent here.”
+              </Subtitle>
+              <br />
+              <br />
+              <Subtitle>
+                “We have been very fortunate to have found The Grove. Our children’s early years have been thoroughly enriched by their time at your nursery.
+                The loving, structured and stimulating environment you have created has given them confidence, happiness and precious friendships. We are very
+                grateful to you all for your hard work.”
+              </Subtitle>
+            </Column>
+          </Row>
+        </Column>
+      </ContentBlock>
       <Footer color={GREEN_200}></Footer>
     </Wrapper>
   );

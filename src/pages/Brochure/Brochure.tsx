@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Document as PDF, Page, pdfjs } from 'react-pdf';
 import { useScrollPosition } from '../../utils/hooks';
-import { openLink, clamp } from '../../utils/helpers';
+import { clamp } from '../../utils/helpers';
 import { Direction } from '../../models/models';
 import { TabletSize } from '../../models/variables';
 
@@ -15,7 +15,6 @@ import Link from '../../components/Link';
 import { GREEN_200, SPACE_XL, HEADER_HEIGHT, BLUE_400 } from '../../styles/global';
 import { Column, Row, Paragraph_1, Heading } from '../../styles/shared';
 import { BrochureWrapper, Wrapper, Next, Prev } from './Brochure.styles';
-import { StyledComponent } from 'styled-components';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
@@ -25,7 +24,7 @@ const Brochure = () => {
   const IsTablet = useMediaQuery({ query: `(max-width: ${TabletSize.max}px)` });
 
   const direction = IsTablet ? Direction.Column : Direction.Row;
-  const columns = IsTablet ? 1 : 2;
+  const columns = IsTablet ? 1 : 2.1;
 
   const [page, setPage] = useState<number>(1);
   const [maxPages, setMaxPages] = useState<number>(1);
@@ -44,7 +43,7 @@ const Brochure = () => {
     <Wrapper id='wrapper'>
       <Header scrollY={scrollY} />
       <ContentBlock paddingTop={headerOffset} paddingBot={SPACE_XL}>
-        <Row direction={direction}>
+        <Row between direction={direction}>
           <Column columns={columns}>
             <Row>
               <Heading>Download Brochure</Heading>

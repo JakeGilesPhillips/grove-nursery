@@ -387,7 +387,12 @@ const OurNursery = () => {
           </Row>
           <Row between direction={direction}>
             <Column columns={IsTablet ? 1 : 2}>
-              <Paragraph_1></Paragraph_1>
+              <Paragraph_1>We are very lucky to have a small outside area for the children to play in.</Paragraph_1>
+              <br />
+              <Paragraph_1>
+                On fine days the area is set up with a range of different toys. There is a home area for role play and a swing and plenty of ride on toys a
+                slides for physical play. The sand and water trays are also put out for the children to have greater freedom in their exploratory play.
+              </Paragraph_1>
             </Column>
             <br />
             <Column columns={IsTablet ? 1 : 2.8}>
