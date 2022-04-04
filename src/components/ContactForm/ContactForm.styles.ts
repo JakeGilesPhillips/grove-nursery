@@ -1,4 +1,4 @@
-import { SPACE_XS, SPACE_S, SPACE_XXS, GREEN_400, PLATINUM_800 } from "../../styles/global";
+import { SPACE_XS, SPACE_S, SPACE_XXS, GREEN_400, PLATINUM_800, RED_400 } from "../../styles/global";
 import { Paragraph_1 } from "../../styles/shared";
 import styled, { css } from "styled-components";
 
@@ -8,12 +8,23 @@ const Form = styled.form`
   width: 100%;
 `;
 
-const Label = styled(Paragraph_1)<{ padL?: boolean }>`
+const Label = styled(Paragraph_1)<{ padL?: boolean, required?: boolean }>`
   position: relative;
   margin-bottom: ${SPACE_XXS}px;
   color: ${PLATINUM_800};
+
   ${props => props.padL && css`
     margin-left: ${SPACE_XS}px;
+  `}
+
+  ${props => props.required && css`
+    &::after {
+      content: '*';
+      position: absolute;
+      right: 15px;
+      top: 30px;
+      color: ${RED_400};
+    }
   `}
 `;
 
@@ -41,6 +52,11 @@ const Input = styled.input<{ padL?: boolean, padR?: boolean }>`
   ::placeholder { color: rgba(255, 255, 255, 0.5); }
   :-ms-input-placeholder { color: rgba(255, 255, 255, 0.5); }
   ::-ms-input-placeholder { color: rgba(255, 255, 255, 0.5); }
+`;
+
+const Error = styled(Paragraph_1)`
+  color: ${RED_400};
+  margin-bottom: ${SPACE_S}px;
 `;
 
 const TextArea = styled.textarea`
@@ -88,15 +104,23 @@ const Button = styled.button`
     transition: .4s;
   }
 
-  :hover {
-    ::before {
-      height: 100%;
-    }
+  ${props => !props.disabled && css`
+    :hover {
+      ::before {
+        height: 100%;
+      }
 
-    span {
-      color: ${GREEN_400};
+      span {
+        color: ${GREEN_400};
+      }
     }
-  }
+  `}
 `;
 
-export { Form, Label, Input, TextArea, Button };
+const LoaderWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export { Form, Label, Input, Error, TextArea, Button, LoaderWrapper };

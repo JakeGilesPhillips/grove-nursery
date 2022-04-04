@@ -393,6 +393,10 @@ const OurNursery = () => {
                 On fine days the area is set up with a range of different toys. There is a home area for role play and a swing and plenty of ride on toys a
                 slides for physical play. The sand and water trays are also put out for the children to have greater freedom in their exploratory play.
               </Paragraph_1>
+              <br />
+              <Paragraph_1>
+                Babies have the opportunity for outdoor play too with their specially designed garden directly off our exploratory room.
+              </Paragraph_1>
             </Column>
             <br />
             <Column columns={IsTablet ? 1 : 2.8}>

@@ -42,7 +42,7 @@ const Brochure = () => {
   return (
     <Wrapper id='wrapper'>
       <Header scrollY={scrollY} />
-      <ContentBlock paddingTop={headerOffset} paddingBot={SPACE_XL}>
+      <ContentBlock paddingTop={headerOffset} paddingBot={SPACE_XL} minHeight={800}>
         <Row between direction={direction}>
           <Column columns={columns}>
             <Row>

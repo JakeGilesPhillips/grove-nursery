@@ -241,7 +241,7 @@ const OurNursery = () => {
         <Column>
           <Row>
             <Column>
-              <Heading>The Grove Heatley Early years (HEYL)</Heading>
+              <Heading>The Grove Healthy Early Years (HEYL)</Heading>
             </Column>
           </Row>
           <Row>
