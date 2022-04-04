@@ -12,6 +12,8 @@ import ContentBlock from '../../components/ContentBlock';
 import Footer from '../../components/Footer';
 
 import pattern_001 from '../../assets/backgrounds/pattern_001.png';
+import pattern_002 from '../../assets/backgrounds/pattern_002.png';
+
 import street_view from '../../assets/nursery/street-view-001.jpeg';
 import willow_room_001 from '../../assets/nursery/willow-room-001.jpeg';
 import willow_room_002 from '../../assets/nursery/willow-room-002.jpeg';
@@ -32,9 +34,11 @@ import oak_room_002 from '../../assets/nursery/oak-room-002.jpeg';
 import oak_room_003 from '../../assets/nursery/oak-room-003.jpeg';
 import oak_room_004 from '../../assets/nursery/oak-room-004.jpeg';
 import oak_room_005 from '../../assets/nursery/oak-room-005.jpeg';
+import garden_001 from '../../assets/nursery/garden-001.jpeg';
+import garden_002 from '../../assets/nursery/garden-002.jpeg';
+import garden_003 from '../../assets/nursery/garden-003.jpeg';
+import garden_004 from '../../assets/nursery/garden-004.jpeg';
 import explore_room_001 from '../../assets/nursery/explore-room-001.jpeg';
-import explore_room_002 from '../../assets/nursery/explore-room-002.jpeg';
-import explore_room_003 from '../../assets/nursery/explore-room-003.jpeg';
 import teaching_room_001 from '../../assets/nursery/teaching-room-001.jpeg';
 
 import { GREEN_200, SPACE_XL, HEADER_HEIGHT } from '../../styles/global';
@@ -54,7 +58,8 @@ const OurNursery = () => {
   const chestnut = [chestnut_room_001, chestnut_room_002, chestnut_room_003, chestnut_room_004];
   const elm = [elm_room_001, elm_room_002, elm_room_003, elm_room_004];
   const oak = [oak_room_001, oak_room_002, oak_room_003, oak_room_004, oak_room_005];
-  const explore = [explore_room_001, explore_room_002, explore_room_003];
+  const garden = [garden_001, garden_002, garden_003, garden_004];
+  const explore = [explore_room_001];
   const teaching = [teaching_room_001];
 
   return (
@@ -187,7 +192,7 @@ const OurNursery = () => {
         </Column>
       </ContentBlock>
 
-      <ContentBlock backgroundImage={pattern_001} repeatPattern shadow paddingTop={SPACE_XL} paddingBot={SPACE_XL} waveTop waveBottom>
+      <ContentBlock backgroundImage={pattern_002} repeatPattern shadow paddingTop={SPACE_XL} paddingBot={SPACE_XL} waveTop waveBottom>
         <Column>
           <Row>
             <Column>
@@ -277,13 +282,31 @@ const OurNursery = () => {
         <Column>
           <Row>
             <Column>
-              <Heading>Explore Room</Heading>
+              <Heading>Exploration/Sensory Room</Heading>
             </Column>
           </Row>
           <Row between direction={direction}>
             <Column columns={IsTablet ? 1 : 2}>
-              <Paragraph_1>This beautiful light, spacious room is for our oldest children.</Paragraph_1>
+              <Paragraph_1>
+                Our purposely designed sensory room is full of lights, bubble tubes and fibre optic lights it encourages our youngest children to use their
+                senses to develop a greater understanding of the world around them. It gives them freedom to explore in a stimulating and inviting environment.
+              </Paragraph_1>
               <br />
+              <Paragraph_1>Our staff support the children through play and exploration to make connections and to explore.</Paragraph_1>
+              <br />
+              <Paragraph_1>
+                Sensory play encourages learning through exploration, curiosity, problem solving and creativity. It helps to build nerve connections in the
+                brain and encourages the development of language and motor skills. It also helps our youngest children to develop bonds with their peers and
+                staff.
+              </Paragraph_1>
+              <br />
+              <Paragraph_1>
+                For young children, sensory play stimulates their sense of touch, smell, taste, sight, movement, and hearing. It helps create connections in the
+                brain that allow for more complex thoughts and tasks. It helps stimulate and relax the senses to help children to learn, move, communicate,
+                share and concentrate.
+              </Paragraph_1>
+              <br />
+              <Paragraph_1>The children thoroughly enjoy exploring our sensory room.</Paragraph_1>
             </Column>
             <br />
             <Column columns={IsTablet ? 1 : 2.8}>
@@ -297,17 +320,78 @@ const OurNursery = () => {
         <Column>
           <Row>
             <Column>
-              <Heading>Teaching Room</Heading>
+              <Heading>Montessori Teaching Room</Heading>
+              <Subheading>“Play is the child’s work.”</Subheading>
             </Column>
           </Row>
           <Row between direction={direction}>
             <Column columns={IsTablet ? 1 : 2}>
-              <Paragraph_1>This beautiful light, spacious room is for our oldest children.</Paragraph_1>
+              <Paragraph_1>
+                Montessori believed in sensory play, where the child learns through play from hands on experiences, with the help of a teacher helping the child
+                play to learn. 
+              </Paragraph_1>
               <br />
+              <Paragraph_1>
+                Our qualified Montessori teacher works closely with children aged 2 years and up once a week on a one to one session giving he children tailor
+                made sessions as an extra addition to their room learning. She supports them through positive reinforcement offering them support and guidance
+                with their choices.
+              </Paragraph_1>
+              <br />
+              <Paragraph_1>
+                The room is set out to give the children freedom of choice to choose which activities they would like to do that day. All activities are well
+                presented and displayed on open shelves at the child’s level.
+              </Paragraph_1>
+              <br />
+              <Paragraph_1>
+                Our activities range from practical life equipment, which supports children in their independence to become confident in their own abilities. It
+                develops their fine motor skills, hand eye coordination and bilateral integration using buttons, zips, buckles and bow which in turn will
+                develop their life skills.
+              </Paragraph_1>
+              <br />
+              <Paragraph_1>
+                Our senatorial shelf has sound boxes, smell boxes, along with visually stimulating activities which can identify any delays in sight or hearing
+                impairment.
+              </Paragraph_1>
+              <br />
+              <Paragraph_1>Our binomial cube promotes the child’s visual perception of 3D shapes.</Paragraph_1>
+              <br />
+              <Paragraph_1>
+                Our maths shelf has lots of tactile numbers and shapes as well as variety of counting activities to support the child in early maths, number,
+                and shape recognition.
+              </Paragraph_1>
+              <br />
+              <Paragraph_1>
+                Our language shelf has a variety of activities to promote language i.e. language boxes, blow games, for speech development. Cognitive activities
+                and sandpaper letters, nouns, sight words, pink sentence reading cards.
+              </Paragraph_1>
+              <br />
+              <Paragraph_1>
+                Weekly informative reports are written by our teacher on the child’s choice of activity and their progress. The children have great fun in our
+                teaching room and enjoy the one to one attention from the teacher.
+              </Paragraph_1>
             </Column>
             <br />
             <Column columns={IsTablet ? 1 : 2.8}>
               <ImageGallery items={getImages(teaching)} showPlayButton={false} slideInterval={3000} autoPlay lazyLoad showBullets />
+            </Column>
+          </Row>
+        </Column>
+      </ContentBlock>
+
+      <ContentBlock backgroundImage={pattern_002} repeatPattern shadow paddingTop={SPACE_XL} paddingBot={SPACE_XL} waveTop>
+        <Column>
+          <Row>
+            <Column>
+              <Heading>Garden</Heading>
+            </Column>
+          </Row>
+          <Row between direction={direction}>
+            <Column columns={IsTablet ? 1 : 2}>
+              <Paragraph_1></Paragraph_1>
+            </Column>
+            <br />
+            <Column columns={IsTablet ? 1 : 2.8}>
+              <ImageGallery items={getImages(garden)} showPlayButton={false} slideInterval={3000} autoPlay lazyLoad showBullets />
             </Column>
           </Row>
         </Column>

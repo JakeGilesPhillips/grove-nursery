@@ -51,4 +51,8 @@ export const hexToUrl = (hex: string = '#FFFFFF'): string => {
   return hex.replace('#', '%23');
 };
 
+export const clamp = (value: number, min: number, max: number) => {
+  return Math.max(Math.min(max, value), min);
+};
+
 export const getImages = (images: string[]) => images.map((i) => ({ original: i }));
