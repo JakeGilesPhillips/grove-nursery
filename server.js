@@ -1,8 +1,10 @@
-const bodyparser = require('body-parser')
+const bodyparser = require('body-parser');
 const nodemailer = require('nodemailer');
 const express = require('express');
 const path = require('path'); 
 const app = express();
+
+require('dotenv').config();
 
 app.use(bodyparser.json());
 app.use(express.static(path.resolve(__dirname, 'public')));
@@ -14,7 +16,7 @@ app.post('/send', (req, res) => {
 
   const mailOptions = {
       from: `${name} ${email}`,
-      to: 'contact@thegrovenursery.co.uk',
+      to: 'administration@thegrovenursery.co.uk',
       subject: "New Message from Contact Form",
       text: `Name: ${name}\nNumber: ${number == "" ? 'n/a' : number}\nEmail: ${email}\n\n${message}`
   }
@@ -26,17 +28,17 @@ app.post('/send', (req, res) => {
  
 })
 
-app.listen(7710, () => console.log('App listening on port: 7710'));
+app.listen(process.env.EXPRESS_PORT, () => console.log(`App listening on port: ${process.env.EXPRESS_PORT}`));
 
 const transporter = nodemailer.createTransport({
-  host: "mail.thegrovenursery.co.uk",
-  port: 465,
+  host: process.env.NODEMAILER_HOST,
+  port: process.env.NODEMAILER_PORT,
   secure: true,
   auth:
   {
       type: "login",
-      user: "contact@thegrovenursery.co.uk",
-      pass: "zCwJT!GCF"
+      user: process.env.NODEMAILER_USER,
+      pass: process.env.NODEMAILER_PASS,
   },
   tls: {
       rejectUnauthorized: false
