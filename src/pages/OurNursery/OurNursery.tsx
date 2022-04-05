@@ -388,7 +388,6 @@ const OurNursery = () => {
           <Row between direction={direction}>
             <Column columns={IsTablet ? 1 : 2}>
               <Paragraph_1>We are very lucky to have a small outside area for the children to play in.</Paragraph_1>
-              <br />
               <Paragraph_1>
                 On fine days the area is set up with a range of different toys. There is a home area for role play and a swing and plenty of ride on toys a
                 slides for physical play. The sand and water trays are also put out for the children to have greater freedom in their exploratory play.
@@ -396,6 +395,22 @@ const OurNursery = () => {
               <br />
               <Paragraph_1>
                 Babies have the opportunity for outdoor play too with their specially designed garden directly off our exploratory room.
+              </Paragraph_1>
+              <br />
+              <br />
+              <Paragraph_1 weight={400}>Further outdoor experiences in our daily curriculum:</Paragraph_1>
+              <br />
+              <Paragraph_1>Children are encouraged to wear weather appropriate clothing to enjoy outdoor play in all weathers.</Paragraph_1>
+              <br />
+              <Paragraph_1>
+                We encourage children to develop a wider experience of the world around them. We have double buggies to take the babies out on daily walks and
+                visits to the park or canal to feed the ducks.
+              </Paragraph_1>
+              <br />
+              <Paragraph_1>
+                In developing our older children’s out door experiences, they also have the opportunity to visit the local parks and canal. They also partake in
+                extracurricular outings to widen their knowledge and experiences, they visit places of interest, such as museums, City farm, Buckingham palace,
+                City airport and aquarium to name a few.
               </Paragraph_1>
             </Column>
             <br />
