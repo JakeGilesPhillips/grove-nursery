@@ -32,7 +32,7 @@ app.listen(process.env.EXPRESS_PORT, () => console.log(`App listening on port: $
 
 const transporter = nodemailer.createTransport({
   host: process.env.NODEMAILER_HOST,
-  port: process.env.NODEMAILER_PORT,
+  port: 465,
   secure: true,
   auth:
   {
