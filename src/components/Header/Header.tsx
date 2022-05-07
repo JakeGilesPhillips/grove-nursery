@@ -11,8 +11,10 @@ import Image from '../Image';
 import DynamicWrapper from '../DynamicWrapper';
 
 import LogoFullNew from '../../assets/logos/logo-full-new.png';
+import Facebook from '../../assets/icons/facebook.png';
+import Instagram from '../../assets/icons/instagram.png';
 
-import { HeaderNavLink, Paragraph_1, Paragraph_2 } from '../../styles/shared';
+import { HeaderNavLink, Paragraph_1 } from '../../styles/shared';
 import { GREEN_400, GREEN_800, HEADER_SCROLL_THRESHOLD } from '../../styles/global';
 import {
   HeaderWrapper,
@@ -91,6 +93,12 @@ const Header = (props: HeaderProps) => {
                 </Link>
                 <Link icon={{ icon: 'mail', size: 12, padding: { bottom: 2, left: 24, right: 4 } }} url={`mailto:${CONTACT_EMAIL}`}>
                   <Paragraph_1 weight={500}>{CONTACT_EMAIL}</Paragraph_1>
+                </Link>
+                <Link url=''>
+                  <Image width={10} src={Facebook} />
+                </Link>
+                <Link url=''>
+                  <Image width={10} src={Instagram} />
                 </Link>
               </HeaderLinksRow>
               <HeaderLinksRow id='header-bar-links-navigation'>
