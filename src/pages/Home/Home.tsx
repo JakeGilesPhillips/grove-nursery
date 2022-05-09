@@ -17,12 +17,9 @@ import pattern_002 from '../../assets/backgrounds/pattern_002.png';
 import oak_room_001 from '../../assets/nursery/oak-room-001.jpeg';
 import chestnut_room_004 from '../../assets/nursery/chestnut-room-001.jpeg';
 
-import image_001 from '../../assets/photos/image-001.png';
-import image_002 from '../../assets/photos/image-002.png';
-import image_003 from '../../assets/photos/image-003.png';
 import image_004 from '../../assets/photos/image-004.png';
-import image_006 from '../../assets/photos/image-006.png';
 import image_009 from '../../assets/photos/image-009.png';
+import image_012 from '../../assets/photos/image-012.png';
 
 import { GREEN_200, SPACE_XL, HEADER_HEIGHT } from '../../styles/global';
 import { Row, Column, Quote, Paragraph_1, Subheading, Subtitle } from '../../styles/shared';
@@ -38,7 +35,7 @@ const Home = () => {
   const direction = IsTablet ? Direction.Column : Direction.Row;
   const columns = IsTablet ? 1 : 2.1;
 
-  const images = [image_001, image_002, image_003, image_004];
+  const images = [image_004, image_012];
 
   return (
     <Wrapper id='wrapper'>
@@ -113,7 +110,7 @@ const Home = () => {
         <Row between direction={direction}>
           <Column columns={columns}>
             <GalleryWrapper>
-              <ImageGallery items={getImages([image_006])} showPlayButton={false} showNav={false} showFullscreenButton={false} />
+              <ImageGallery items={getImages([chestnut_room_004])} showPlayButton={false} showNav={false} showFullscreenButton={false} />
             </GalleryWrapper>
           </Column>
           <br />

@@ -5,7 +5,7 @@ import MediaQuery, { useMediaQuery } from 'react-responsive';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import { TabletSize } from '../../models/variables';
-import { CONTACT_EMAIL, PHONE_NUMBER } from '../../models/constants';
+import { CONTACT_EMAIL, FACEBOOK_URL, INSTAGRAM_URL, PHONE_NUMBER } from '../../models/constants';
 
 import Image from '../Image';
 import DynamicWrapper from '../DynamicWrapper';
@@ -88,17 +88,13 @@ const Header = (props: HeaderProps) => {
           <MediaQuery minWidth={TabletSize?.max}>
             <HeaderLinks id='header-bar-links'>
               <HeaderLinksRow id='header-bar-links-contact' hide={smallHeader}>
-                <Link icon={{ icon: 'phone', size: 12, padding: { bottom: 2, right: 4 } }} url=''>
+                <Link image={{ src: Facebook, width: 15, padding: { bottom: 2, right: 5 } }} url={FACEBOOK_URL} />
+                <Link image={{ src: Instagram, width: 15, padding: { bottom: 2 } }} url={INSTAGRAM_URL} />
+                <Link icon={{ icon: 'phone', size: 12, padding: { bottom: 2, left: 24, right: 4 } }} url=''>
                   <Paragraph_1 weight={500}>{PHONE_NUMBER}</Paragraph_1>
                 </Link>
                 <Link icon={{ icon: 'mail', size: 12, padding: { bottom: 2, left: 24, right: 4 } }} url={`mailto:${CONTACT_EMAIL}`}>
                   <Paragraph_1 weight={500}>{CONTACT_EMAIL}</Paragraph_1>
-                </Link>
-                <Link url=''>
-                  <Image width={10} src={Facebook} />
-                </Link>
-                <Link url=''>
-                  <Image width={10} src={Instagram} />
                 </Link>
               </HeaderLinksRow>
               <HeaderLinksRow id='header-bar-links-navigation'>

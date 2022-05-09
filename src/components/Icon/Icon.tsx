@@ -3,7 +3,7 @@ import { Spacing } from 'src/models/models';
 import { PLATINUM_700 } from '../../styles/global';
 
 export interface IconProps {
-  icon: string;
+  icon?: string;
   size?: number;
   color?: string;
   padding?: Spacing;
