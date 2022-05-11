@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Heading, PageTitle, Subheading } from '../../styles/shared';
-import { GREEN_800, SPACE_M, SPACE_XXS } from '../../styles/global';
+import { RED_PRIMARY, SPACE_M, SPACE_XXS } from '../../styles/global';
 
 const Wrapper = styled.div`
   padding-top: 0px;
@@ -18,7 +18,7 @@ const Tagline = styled(Subheading)`
 `;
 
 const HoverButton = styled(Heading)`
-  background: ${GREEN_800};
+  background: ${RED_PRIMARY};
   padding-top: ${SPACE_XXS}px;
   padding-left: ${SPACE_M}px;
   padding-right: ${SPACE_M}px;

@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import { Spacing } from "../../models/models";
-import wave_curve from '../../assets/backgrounds/wave-curve-green.svg';
 import { SPACE_L, SPACE_M } from "../../styles/global";
 
 
@@ -26,7 +25,6 @@ const FooterWrapper = styled.div<{ fixed?: boolean; noShadow?: boolean}>`
     width: 100%;
     height: 30px;
     transform: scaleY(-1);
-    background: url("${wave_curve}") repeat-x center 0;
   }
 `;
 

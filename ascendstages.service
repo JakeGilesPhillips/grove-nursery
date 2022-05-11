@@ -1,0 +1,14 @@
+[Unit]
+Description=Ascend Stages Server
+
+[Service]
+ExecStart=/usr/bin/node /var/www/ascendstages/server.js
+Restart=always
+User=ascendstages
+Group=ascendstages
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/var/www/ascendstages
+
+[Install]
+WantedBy=multi-user.target

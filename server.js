@@ -18,7 +18,7 @@ app.post('/send', (req, res) => {
 
   const mailOptions = {
       from: `${name} ${email}`,
-      to: 'administration@thegrovenursery.co.uk',
+      to: '',
       subject: "New Message from Contact Form",
       text: `Name: ${name}\nNumber: ${number == "" ? 'n/a' : number}\nEmail: ${email}\n\n${message}`
   }
@@ -32,26 +32,26 @@ app.post('/send', (req, res) => {
 
 app.listen(process.env.EXPRESS_PORT, () => console.log(`App listening on port: ${process.env.EXPRESS_PORT}`));
 
-const transporter = nodemailer.createTransport({
-  host: process.env.NODEMAILER_HOST,
-  port: 465,
-  secure: true,
-  auth:
-  {
-      type: "login",
-      user: process.env.NODEMAILER_USER,
-      pass: process.env.NODEMAILER_PASS,
-  },
-  tls: {
-      rejectUnauthorized: false
-  }
-});
+// const transporter = nodemailer.createTransport({
+//   host: process.env.NODEMAILER_HOST,
+//   port: 465,
+//   secure: true,
+//   auth:
+//   {
+//       type: "login",
+//       user: process.env.NODEMAILER_USER,
+//       pass: process.env.NODEMAILER_PASS,
+//   },
+//   tls: {
+//       rejectUnauthorized: false
+//   }
+// });
 
-transporter.verify(function (error, success) 
-{
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Mail Server running");
-  }
-});
+// transporter.verify(function (error, success) 
+// {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log("Mail Server running");
+//   }
+// });

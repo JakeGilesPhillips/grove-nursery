@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { GREEN_400 } from "../../styles/global";
+import { RED_PRIMARY } from "../../styles/global";
 
 const MenuWrapper = styled.div`
   display: flex;
@@ -15,7 +15,7 @@ const MenuBar = styled.div<{ index: number }>`
   top: 0px;
   width: 100%;
   height: 4px;
-  background: ${GREEN_400};
+  background: ${RED_PRIMARY};
   border-radius: 10px;
   transition: transform .2s, top .2s .4s;
   transform-origin: center;

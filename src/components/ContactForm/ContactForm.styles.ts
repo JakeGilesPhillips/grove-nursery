@@ -1,4 +1,4 @@
-import { SPACE_XS, SPACE_S, SPACE_XXS, GREEN_400, PLATINUM_800, RED_400 } from "../../styles/global";
+import { SPACE_XS, SPACE_S, SPACE_XXS, PLATINUM_800, RED_SECONDARY, RED_PRIMARY } from "../../styles/global";
 import { Paragraph_1 } from "../../styles/shared";
 import styled, { css } from "styled-components";
 
@@ -23,7 +23,7 @@ const Label = styled(Paragraph_1)<{ padL?: boolean, required?: boolean }>`
       position: absolute;
       right: 15px;
       top: 30px;
-      color: ${RED_400};
+      color: ${RED_SECONDARY};
     }
   `}
 `;
@@ -55,7 +55,7 @@ const Input = styled.input<{ padL?: boolean, padR?: boolean }>`
 `;
 
 const Error = styled(Paragraph_1)`
-  color: ${RED_400};
+  color: ${RED_PRIMARY};
   margin-bottom: ${SPACE_S}px;
 `;
 
@@ -111,7 +111,7 @@ const Button = styled.button`
       }
 
       span {
-        color: ${GREEN_400};
+        color: ${RED_SECONDARY};
       }
     }
   `}
