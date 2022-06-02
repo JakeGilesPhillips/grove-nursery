@@ -21,6 +21,12 @@ import image_004 from '../../assets/photos/image-004.png';
 import image_009 from '../../assets/photos/image-009.png';
 import image_012 from '../../assets/photos/image-012.png';
 import image_013 from '../../assets/photos/image-013.png';
+import image_014 from '../../assets/photos/image-014.jpeg';
+import image_015 from '../../assets/photos/image-015.jpeg';
+import image_016 from '../../assets/photos/image-016.jpeg';
+import image_017 from '../../assets/photos/image-017.jpeg';
+import image_018 from '../../assets/photos/image-018.jpeg';
+import image_019 from '../../assets/photos/image-019.jpeg';
 
 import { GREEN_200, SPACE_XL, HEADER_HEIGHT } from '../../styles/global';
 import { Row, Column, Quote, Paragraph_1, Subheading, Subtitle } from '../../styles/shared';
@@ -37,6 +43,7 @@ const Home = () => {
   const columns = IsTablet ? 1 : 2.1;
 
   const images = [image_004, image_012, image_013];
+  const images2 = [image_014, image_015, image_016, image_017, image_018, image_019];
 
   return (
     <Wrapper id='wrapper'>
@@ -190,7 +197,7 @@ const Home = () => {
           <br />
           <Column columns={columns}>
             <GalleryWrapper>
-              <ImageGallery items={getImages([image_009])} showPlayButton={false} showNav={false} showFullscreenButton={false} />
+              <ImageGallery items={getImages(images2)} showPlayButton={false} showNav={false} showFullscreenButton={false} autoPlay slideInterval={3000} />
             </GalleryWrapper>
           </Column>
         </Row>
