@@ -58,7 +58,7 @@ const OurFees = () => {
                   <Column columns={4}>
                     <br />
                     <br />
-                    <Paragraph_1>£1430</Paragraph_1>
+                    <Paragraph_1>£1424.05</Paragraph_1>
                   </Column>
                 </Row>
                 <br />
@@ -81,7 +81,7 @@ const OurFees = () => {
                   <Column columns={4}>
                     <br />
                     <br />
-                    <Paragraph_1>£1275</Paragraph_1>
+                    <Paragraph_1>£1269.05</Paragraph_1>
                   </Column>
                 </Row>
                 <br />
@@ -104,7 +104,7 @@ const OurFees = () => {
                   <Column columns={4}>
                     <br />
                     <br />
-                    <Paragraph_1>£884</Paragraph_1>
+                    <Paragraph_1>£878.05</Paragraph_1>
                   </Column>
                 </Row>
                 <br />
@@ -127,7 +127,7 @@ const OurFees = () => {
                   <Column columns={4}>
                     <br />
                     <br />
-                    <Paragraph_1>£520</Paragraph_1>
+                    <Paragraph_1>£514.05</Paragraph_1>
                   </Column>
                 </Row>
                 <br />
