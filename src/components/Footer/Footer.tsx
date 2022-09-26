@@ -4,13 +4,15 @@ import { useMediaQuery } from 'react-responsive';
 
 import { useWindowSize } from '../../utils/hooks';
 import { TabletSize } from '../../models/variables';
-import { CONTACT_EMAIL, GOOGLE_MAPS_URL, PHONE_NUMBER } from '../../models/constants';
+import { CONTACT_EMAIL, FACEBOOK_URL, GOOGLE_MAPS_URL, INSTAGRAM_URL, PHONE_NUMBER } from '../../models/constants';
 
 import Link from '../Link';
 import Image from '../Image';
 import DynamicWrapper from '../DynamicWrapper';
 
 import OfstedLogo from '../../assets/ofsted/Ofsted_Good_GP_Colour.png';
+import Facebook from '../../assets/icons/facebook.png';
+import Instagram from '../../assets/icons/instagram.png';
 
 import { Column, Caption, Paragraph_1, Title, Row } from '../../styles/shared';
 import { SPACE_S } from '../../styles/global';
@@ -56,6 +58,10 @@ const Footer = (props: FooterProps) => {
               <Link icon={{ icon: 'mail', size: 12, padding: { right: 4 } }} url={`mailto:${CONTACT_EMAIL}`}>
                 <Paragraph_1 underline>{CONTACT_EMAIL}</Paragraph_1>
               </Link>
+              <Row>
+                <Link image={{ src: Facebook, width: 30, padding: { top: 5, right: 20 } }} url={FACEBOOK_URL} />
+                <Link image={{ src: Instagram, width: 30, padding: { top: 5 } }} url={INSTAGRAM_URL} />
+              </Row>
             </FooterSegment>
             <FooterSegment alignRight hide={IsTabletOrPhone}>
               <Image src={OfstedLogo} height={125} />

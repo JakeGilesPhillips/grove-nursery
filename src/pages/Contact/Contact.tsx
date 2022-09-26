@@ -7,11 +7,15 @@ import Header from '../../components/Header';
 import ContentBlock from '../../components/ContentBlock';
 import ContactForm from '../../components/ContactForm';
 import Footer from '../../components/Footer';
+import Link from '../../components/Link';
 
 import pattern_001 from '../../assets/backgrounds/pattern_001.png';
+import Facebook from '../../assets/icons/facebook.png';
+import Instagram from '../../assets/icons/instagram.png';
 
+import { FACEBOOK_URL, INSTAGRAM_URL } from '../../models/constants';
 import { GREEN_200, HEADER_HEIGHT, SPACE_XL } from '../../styles/global';
-import { Column, PageTitle, Paragraph_1 } from '../../styles/shared';
+import { Column, PageTitle, Paragraph_1, Row } from '../../styles/shared';
 import { MapWrapper, Wrapper } from './Contact.styles';
 
 const Contact = () => {
@@ -50,6 +54,17 @@ const Contact = () => {
                 src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJdwV9rZ8cdkgRITGQn4WfN4k&key=${GOOGLE_API_KEY}`}
               ></iframe>
             </MapWrapper>
+          </Column>
+          <br />
+          <br />
+          <Column centerH centerV>
+            <PageTitle>Follow Us</PageTitle>
+            <Paragraph_1 style={{ textAlign: 'center' }}>Check us out on social media.</Paragraph_1>
+            <br />
+            <Row>
+              <Link image={{ src: Facebook, width: 30, padding: { top: 5, right: 20 } }} url={FACEBOOK_URL} />
+              <Link image={{ src: Instagram, width: 30, padding: { top: 5 } }} url={INSTAGRAM_URL} />
+            </Row>
           </Column>
         </Column>
       </ContentBlock>
