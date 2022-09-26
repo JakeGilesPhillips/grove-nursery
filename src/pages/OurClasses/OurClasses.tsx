@@ -382,7 +382,7 @@ const OurNursery = () => {
               <br />
               <br />
               <Row centerV centerH>
-                <Image src={foodlogo} height={80} />
+                <Image src={foodlogo} height={80} alt='food hygiene rating logo with score of 5' />
               </Row>
             </Column>
           </Row>

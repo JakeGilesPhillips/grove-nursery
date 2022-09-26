@@ -68,23 +68,49 @@ const span = styled.span<{ fontSize?: number; weight?: number; underline?: boole
     `};
 `;
 
-const PageTitle = styled(span)`
+const Quote = styled.h1<{ fontSize?: number }>`
+  display: inline-flex;
+  font-family: 'Dongle', sans-serif;
+  line-height: 1;
   font-size: 30pt;
-  font-weight: ${(props) => props.weight ?? 700};
-`;
-const Quote = styled(PageTitle)`
   color: white;
+  margin: unset;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  ${(props) =>
+    props.fontSize &&
+    css`
+      font-size: ${props.fontSize}pt !important;
+    `};
 `;
-const Heading = styled(span)`
+const PageTitle = styled.h1`
+  display: inline-flex;
+  font-family: 'Dongle', sans-serif;
+  line-height: 1;
+  font-size: 30pt;
+  font-weight: 700;
+  margin: unset;
+  color: ${PLATINUM_700};
+`;
+const Heading = styled.h2`
+  display: inline-flex;
+  font-family: 'Dongle', sans-serif;
+  line-height: 1;
   font-size: 24pt;
-  font-weight: ${(props) => props.weight ?? 700};
+  font-weight: 700;
+  margin: unset;
+  color: ${PLATINUM_700};
 `;
-const Subheading = styled(span)`
+const Subheading = styled.h3<{ weight?: number }>`
+  display: inline-flex;
+  font-family: 'Dongle', sans-serif;
+  line-height: 1;
+  color: ${PLATINUM_700};
   font-size: 22pt;
   font-weight: ${(props) => props.weight ?? 400};
+  margin: unset;
   margin-bottom: ${SPACE_XS}px;
 `;
+
 const Title = styled(span)`
   font-size: 20pt;
   font-weight: ${(props) => props.weight ?? 400};

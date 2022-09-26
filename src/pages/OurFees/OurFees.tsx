@@ -10,7 +10,7 @@ import ContentBlock from '../../components/ContentBlock';
 import Footer from '../../components/Footer';
 
 import { GREEN_200, HEADER_HEIGHT, SPACE_XL } from '../../styles/global';
-import { Column, Row, Paragraph_1, Heading, Subheading } from '../../styles/shared';
+import { Column, Row, Paragraph_1, Heading, Subheading, PageTitle } from '../../styles/shared';
 import { ScrollWrapper, ScrollWrapperInner, Wrapper } from './OurFees.styles';
 
 const OurFees = () => {
@@ -23,7 +23,7 @@ const OurFees = () => {
       <Header scrollY={scrollY} />
       <ContentBlock paddingTop={headerOffset} paddingBot={SPACE_XL}>
         <Column columns={1}>
-          <Heading>Fees Structure 2022</Heading>
+          <PageTitle>Fees Structure 2022</PageTitle>
           <br />
           <ScrollWrapper>
             <ScrollWrapperInner>

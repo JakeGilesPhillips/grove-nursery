@@ -1,5 +1,5 @@
 import lerp from 'lerp';
-import { DeviceSize, MinMax, Scrollable } from '../models/models';
+import { DeviceSize, ImageProperties, MinMax, Scrollable } from '../models/models';
 import { DeviceSizeMap, ContentSizeMap, ContentPaddingMap } from '../models/variables';
 
 // Get device
@@ -55,4 +55,4 @@ export const clamp = (value: number, min: number, max: number) => {
   return Math.max(Math.min(max, value), min);
 };
 
-export const getImages = (images: string[]) => images.map((i) => ({ original: i }));
+export const getImages = (images: ImageProperties[]) => images.map((i) => ({ original: i.image, originalAlt: i.alt }));

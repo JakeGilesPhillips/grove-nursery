@@ -81,7 +81,11 @@ const Header = (props: HeaderProps) => {
         <HeaderInner id='header-bar-inner'>
           {/* Logo */}
           <HeaderLogo id='header-bar-logo' onClick={() => onLinkClicked(MenuOptions[0].link)}>
-            {smallHeader ? <HeaderTitle>Grove Nursery</HeaderTitle> : <Image src={LogoFullNew} height={'95%'} />}
+            {smallHeader ? (
+              <HeaderTitle>Grove Nursery</HeaderTitle>
+            ) : (
+              <Image src={LogoFullNew} height={'95%'} alt='the grove nursery tree logo with name to the right' />
+            )}
           </HeaderLogo>
 
           {/* Hide links when reached tablet */}
@@ -124,8 +128,8 @@ const Header = (props: HeaderProps) => {
           {MenuOptions.map(({ title, link }, index) => {
             const color = colorLerp(GREEN_800, GREEN_400, MenuOptions.length)[index];
             return (
-              <HeaderMobileBar key={index} index={index} count={MenuOptions.length} open={menuOpen} color={color}>
-                <HeaderNavLink onClick={() => onLinkClicked(link)}>{title}</HeaderNavLink>
+              <HeaderMobileBar key={index} index={index} count={MenuOptions.length} open={menuOpen} color={color} onClick={() => onLinkClicked(link)}>
+                <HeaderNavLink>{title}</HeaderNavLink>
               </HeaderMobileBar>
             );
           })}

@@ -15,7 +15,7 @@ import surferssewage from '../../assets/icons/surferssewage.png';
 import nationalforest from '../../assets/icons/nationalforest.png';
 
 import { GREEN_200, SPACE_XL, HEADER_HEIGHT } from '../../styles/global';
-import { Column, Row, Paragraph_1, Quote, Heading } from '../../styles/shared';
+import { Column, Row, Paragraph_1, Quote, Heading, PageTitle } from '../../styles/shared';
 import { Wrapper } from './GreenerGrove.styles';
 
 const GreenerGrove = () => {
@@ -32,7 +32,7 @@ const GreenerGrove = () => {
         <Column columns={1}>
           <Row>
             <Column columns={1}>
-              <Heading>A Greener Grove</Heading>
+              <PageTitle>A Greener Grove</PageTitle>
               <br />
               <Paragraph_1>
                 The Grove has always held ‘green’ principles, we have been purchasing organic produce where possible, using toys and equipment made from natural
@@ -106,10 +106,10 @@ const GreenerGrove = () => {
           <br />
           <br />
           <Row between direction={direction}>
-            <img src={terracycle} height={100} style={{ objectFit: 'scale-down' }} />
-            <img src={surferssewage} height={100} style={{ objectFit: 'scale-down' }} />
-            <img src={nationalforest} height={100} style={{ objectFit: 'scale-down' }} />
-            <img src={ecoschools} height={100} style={{ objectFit: 'scale-down' }} />
+            <img src={terracycle} height={100} style={{ objectFit: 'scale-down' }} alt='terracycle logo with text below' />
+            <img src={surferssewage} height={100} style={{ objectFit: 'scale-down' }} alt='surfers against sewage logo with text to the right' />
+            <img src={nationalforest} height={100} style={{ objectFit: 'scale-down' }} alt='the national forest logo with text below' />
+            <img src={ecoschools} height={100} style={{ objectFit: 'scale-down' }} alt='eco schools logo with green flag award text below' />
           </Row>
           <br />
         </Column>

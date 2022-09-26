@@ -44,3 +44,8 @@ export enum Direction {
   Column = 'column',
   Row = 'row',
 }
+
+export interface ImageProperties {
+  image: string;
+  alt?: string;
+}

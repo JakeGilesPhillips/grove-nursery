@@ -13,33 +13,8 @@ import Footer from '../../components/Footer';
 
 import pattern_001 from '../../assets/backgrounds/pattern_001.png';
 import pattern_002 from '../../assets/backgrounds/pattern_002.png';
-
 import street_view from '../../assets/nursery/street-view-001.jpeg';
-import willow_room_001 from '../../assets/nursery/willow-room-001.jpeg';
-import willow_room_002 from '../../assets/nursery/willow-room-002.jpeg';
-import willow_room_003 from '../../assets/nursery/willow-room-003.jpeg';
-import maple_room_001 from '../../assets/nursery/maple-room-001.jpeg';
-import maple_room_002 from '../../assets/nursery/maple-room-002.jpeg';
-import maple_room_003 from '../../assets/nursery/maple-room-003.jpeg';
-import chestnut_room_001 from '../../assets/nursery/chestnut-room-001.jpeg';
-import chestnut_room_002 from '../../assets/nursery/chestnut-room-002.jpeg';
-import chestnut_room_003 from '../../assets/nursery/chestnut-room-003.jpeg';
-import chestnut_room_004 from '../../assets/nursery/chestnut-room-004.jpeg';
-import elm_room_001 from '../../assets/nursery/elm-room-001.jpeg';
-import elm_room_002 from '../../assets/nursery/elm-room-002.jpeg';
-import elm_room_003 from '../../assets/nursery/elm-room-003.jpeg';
-import elm_room_004 from '../../assets/nursery/elm-room-004.jpeg';
-import oak_room_001 from '../../assets/nursery/oak-room-001.jpeg';
-import oak_room_002 from '../../assets/nursery/oak-room-002.jpeg';
-import oak_room_003 from '../../assets/nursery/oak-room-003.jpeg';
-import oak_room_004 from '../../assets/nursery/oak-room-004.jpeg';
-import oak_room_005 from '../../assets/nursery/oak-room-005.jpeg';
-import garden_001 from '../../assets/nursery/garden-001.jpeg';
-import garden_002 from '../../assets/nursery/garden-002.jpeg';
-import garden_003 from '../../assets/nursery/garden-003.jpeg';
-import garden_004 from '../../assets/nursery/garden-004.jpeg';
-import explore_room_001 from '../../assets/nursery/explore-room-001.jpeg';
-import teaching_room_001 from '../../assets/nursery/teaching-room-001.jpeg';
+import { willow, maple, chestnut, elm, oak, garden, explore, teaching } from './images';
 
 import { GREEN_200, SPACE_XL, HEADER_HEIGHT } from '../../styles/global';
 import { Column, Row, Heading, Subheading, Paragraph_1, Quote } from '../../styles/shared';
@@ -52,15 +27,6 @@ const OurNursery = () => {
 
   const titleHeight = IsTablet ? 200 : 400;
   const direction = IsTablet ? Direction.Column : Direction.Row;
-
-  const willow = [willow_room_001, willow_room_002, willow_room_003];
-  const maple = [maple_room_001, maple_room_002, maple_room_003];
-  const chestnut = [chestnut_room_001, chestnut_room_002, chestnut_room_003, chestnut_room_004];
-  const elm = [elm_room_001, elm_room_002, elm_room_003, elm_room_004];
-  const oak = [oak_room_001, oak_room_002, oak_room_003, oak_room_004, oak_room_005];
-  const garden = [garden_001, garden_002, garden_003, garden_004];
-  const explore = [explore_room_001];
-  const teaching = [teaching_room_001];
 
   return (
     <Wrapper id='wrapper'>

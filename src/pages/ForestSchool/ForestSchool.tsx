@@ -10,7 +10,6 @@ import Header from '../../components/Header';
 import ContentBlock from '../../components/ContentBlock';
 import Footer from '../../components/Footer';
 
-import pattern_001 from '../../assets/backgrounds/pattern_001.png';
 import forest_school_001 from '../../assets/forestschool/forest-school-001.png';
 import forest_school_002 from '../../assets/forestschool/forest-school-002.png';
 
@@ -24,7 +23,10 @@ const ForestSchool = () => {
   const IsTablet = useMediaQuery({ query: `(max-width: ${TabletSize.max}px)` });
 
   const titleHeight = IsTablet ? 200 : 300;
-  const forest = [forest_school_001, forest_school_002];
+  const forest = [
+    { image: forest_school_001, alt: 'two children playing in the mud in a forest' },
+    { image: forest_school_002, alt: 'three boxes containing leaves and berries' },
+  ];
 
   return (
     <Wrapper id='wrapper'>

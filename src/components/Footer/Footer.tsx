@@ -64,7 +64,7 @@ const Footer = (props: FooterProps) => {
               </Row>
             </FooterSegment>
             <FooterSegment alignRight hide={IsTabletOrPhone}>
-              <Image src={OfstedLogo} height={125} />
+              <Image src={OfstedLogo} height={125} alt='good ofsted rating icon in blue box' />
             </FooterSegment>
           </FooterSegmentWrapper>
 
